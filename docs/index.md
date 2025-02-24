@@ -8,6 +8,21 @@ tags:
 | Team Number | 04 |
 | Team Members | Vijaya Malhaar Gaddam, Harshavardhan Karancheti |
 | Semester, Year | Spring, 2025 |
+<table>
+  <tr>
+    <td>Team Number</td>
+    <td>04</td>
+  </tr>
+  <tr>
+    <td>Team Members</td>
+    <td>Vijaya Malhaar Gaddam, Harshavardhan Karancheti</td>
+  </tr>
+  <tr>
+    <td>Semester, Year</td>
+    <td>Spring, 2025</td>
+  </tr>
+</table>
+
 
 ### Team Members: 
 Vijaya Malhaar Gaddam, Harshavardhan Karancheti
