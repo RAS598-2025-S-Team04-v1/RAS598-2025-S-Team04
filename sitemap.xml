@@ -1,47 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/</loc>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/charts/</loc>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/component-selection-example/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/esp-32-table/</loc>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/static/node_modules/mathjax/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/pic-table/</loc>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/subfolder/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/second-page/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/component-selection-example/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/static/node_modules/mathjax/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/subfolder/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04.github.io/template_report/subfolder/another-subfile/</loc>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/subfolder/another-subfile/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
