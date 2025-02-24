@@ -1,19 +1,6 @@
----
-title: Experimental Test Drop Setup Using UR5e Robot
-tags:
-- Hello
-- Harsha
----
-
-## Welcome
-
-Lorem markdownum gradus, qui largis, nec pater pleno: fatum. Adspexit cursus
-cur, aut in adhuc crimina **habebat**: pro.
-
-- Et ducimus
-- Prosecta hinc nix vidi rettulit cum sitim
-- Has in tonitribus tenebrae Romane mirantum resupina
-- Figuras et dextram
+## ABOUT
+### Team Members: 
+Vijaya Malhaar Gaddam, Harshavardhan Karancheti
 
 ## Esse quoque sedem plena nunc iecur
 
