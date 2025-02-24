@@ -1,13 +1,5 @@
----
-title: Experimental Test Drop Setup Using UR5e Robot
-tags:
-- tag1
-- tag2
----
+# Experimental Test Drop Setup Using UR5e Robot
 ## ABOUT
-| Team Number | 04 |
-| Team Members | Vijaya Malhaar Gaddam, Harshavardhan Karancheti |
-| Semester, Year | Spring, 2025 |
 <table>
   <tr>
     <td>Team Number</td>
@@ -20,6 +12,14 @@ tags:
   <tr>
     <td>Semester, Year</td>
     <td>Spring, 2025</td>
+  </tr>
+  <tr>
+    <td>Professor</td>
+    <td>Dr. Daniel Aukes</td>
+  </tr>
+  <tr>
+    <td>University</td>
+    <td>Arizona State University</td>
   </tr>
 </table>
 
