@@ -6,22 +6,7 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/component-selection-example/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/static/node_modules/mathjax/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/subfolder/</loc>
-         <lastmod>2025-02-24</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/subfolder/another-subfile/</loc>
          <lastmod>2025-02-24</lastmod>
          <changefreq>daily</changefreq>
     </url>
