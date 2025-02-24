@@ -6,12 +6,11 @@ theme:
   name: material
   custom_dir: custom_theme/
   palette:
-    primary: blue
-    accent: indigo
+    primary: maroon
+    accent: red
   font:
     text: Roboto
-  logo: static/logo.svg
-  favicon: static/logo.png
+    color: Gold
 
   features:
     - navigation.tabs

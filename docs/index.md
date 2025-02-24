@@ -1,6 +1,21 @@
+---
+title: Experimental Test Drop Setup Using UR5e Robot
+tags:
+- tag1
+- tag2
+---
 ## ABOUT
+| Team Number | 04 |
+| Team Members | Vijaya Malhaar Gaddam, Harshavardhan Karancheti |
+| Semester, Year | Spring, 2025 |
+
 ### Team Members: 
 Vijaya Malhaar Gaddam, Harshavardhan Karancheti
+### The Project:
+
+This project idea is by *team 04* based on using ROS2 to use UR5 robot to make an experimental test drop setup.
+
+This project is for the course RAS 598: Experimentation and Deployment of Robotic Devices under Prof. Daniel Aukes, Arizona State University
 
 ## Esse quoque sedem plena nunc iecur
 
