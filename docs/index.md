@@ -23,14 +23,9 @@
   </tr>
 </table>
 
-
-### Team Members: 
-Vijaya Malhaar Gaddam, Harshavardhan Karancheti
 ### The Project:
 
-This project idea is by *team 04* based on using ROS2 to use UR5 robot to make an experimental test drop setup.
-
-This project is for the course RAS 598: Experimentation and Deployment of Robotic Devices under Prof. Daniel Aukes, Arizona State University
+The purpose of this experiment is to evaluate the drop accuracy and repeatability of a UR5e robotic arm in a controlled environment. The test aims to analyze the impact of varying release heights, grip configurations, and object characteristics on drop precision.
 
 ## Esse quoque sedem plena nunc iecur
 
