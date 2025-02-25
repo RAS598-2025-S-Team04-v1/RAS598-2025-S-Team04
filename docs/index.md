@@ -33,7 +33,7 @@ The central research question we seek to answer is:
 This study aims to contribute to automation research by evaluating robotic handling performance in manufacturing and logistics applications.
 
 ## D. Concept
-The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. Fig 1. shows the process flow chart of our project.
+The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. The chart below shows the process flow chart of our project.
 
 ``` mermaid
 graph TD
@@ -42,11 +42,11 @@ graph TD
     C --> D[Conduct Experiment]
     D --> E[Data Collection]
     E --> F[Analysis]
-    F --> G[Report Findings]
-    G --> H{Iterate?}
-    H -->|Yes| B
-    H -->|No| I[End]
+    F --> G{Iterate?}
+    G -->|Yes| D
+    G -->|No| H[Report Findings]
 ```
+
     
 Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
 mea. Nec tamen quae gravem, potens, [cognoscendo
