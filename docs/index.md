@@ -102,8 +102,8 @@ For a succesful execution we woulde require a solid understanding of Kinematics 
 6. *Network Infrastructure* – Ethernet and/or Wi-Fi for seamless communication.
 7. *Test Object* - Quadruped Robot or a prototype.
 
-![Figure 2: Demonstation Setup](DemoSetup.jpg)
-
+>![](DemoSetup.jpg)
+>**Figure 2:** Demonstation Setup.
 
 ### Changes in environmental conditions:
 
@@ -121,4 +121,5 @@ This process can be applied to material testing, orientation-based drop tests, i
 We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in providing mentoring and access to state-of-the-art hardware facilities. Dr. Aukes' guidance will be a key factor in ensuring the technical aspects of the project are addressed effectively. His demands involve regular progress tracking, strict adherence to project milestones, and active participation in troubleshooting sessions. Other facilities, such as laboratory access and state-of-the-art simulation tools, have been guaranteed to aid in our experimental setup.
 
 ### Timeline
-![Figure 3: Demonstation Setup](Schedule.png)
+>![](Schedule.png)
+>**Figure 3:** Tentative Schedule.
