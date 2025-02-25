@@ -357,41 +357,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#g-control-and-autonomy" class="md-nav__link">
-    G. Control and Autonomy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#h-preparation-setup" class="md-nav__link">
-    H. Preparation Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i-final-demonstration" class="md-nav__link">
-    I. Final Demonstration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#j-impact" class="md-nav__link">
-    J. Impact
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#k-advising" class="md-nav__link">
-    K. Advising
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -464,41 +429,6 @@
         <li class="md-nav__item">
   <a href="#f-interface" class="md-nav__link">
     F. Interface
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#g-control-and-autonomy" class="md-nav__link">
-    G. Control and Autonomy
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#h-preparation-setup" class="md-nav__link">
-    H. Preparation Setup
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#i-final-demonstration" class="md-nav__link">
-    I. Final Demonstration
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#j-impact" class="md-nav__link">
-    J. Impact
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#k-advising" class="md-nav__link">
-    K. Advising
   </a>
   
 </li>
@@ -579,90 +509,39 @@ f. <em>Analysis:</em> Data are processed to determine how specified variables in
 g. <em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation
 h. <em>Report Findings:</em> Findings are compiled, and conclusions are provided for future improvements.</p>
 <h2 id="e-sensor-intergration">E. Sensor Intergration</h2>
+<p>This project aims to develop a ROS 2-based robotic manipulation system that integrates a UR5 robotic arm, OptiTrack motion capture technology, and ArUco markers for precise object tracking and manipulation. The goal is to enable the UR5 to autonomously pick up various test objects, identify them using ArUco marker detection, and drop them from a predefined height. ROS 2 will be used for motion planning, perception, and real-time communication, ensuring seamless coordination between different subsystems. This experiment will contribute to research in robotic grasping, object manipulation, and vision-based control.
+The system will employ ArUco markers affixed to the test objects, allowing a camera-based ROS 2 node to detect, identify, and estimate their 6DoF pose. The OptiTrack motion capture system will provide additional high-precision localization feedback, which will be fused with the ArUco marker-based pose estimation for improved tracking accuracy. The robotic arm will adjust its approach dynamically based on real-time feedback from both ArUco marker tracking and OptiTrack data, ensuring robustness against positional variations and environmental disturbances.
+By leveraging ROS 2’s distributed architecture, this project will enhance robotic perception, closed-loop manipulation, and trajectory adaptation in real-time. The combination of vision-based tracking (ArUco) and motion capture (OptiTrack) will enable high-accuracy object handling, automated sorting, and advanced grasping strategies. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and autonomous material handling systems.</p>
 <h2 id="f-interface">F. Interface</h2>
+<p>The UR5 robotic arm will be controlled using ROS 2, leveraging MoveIt 2 for motion planning and custom ROS 2 nodes for real-time interaction. The behavior of the robot will be influenced through:
+•   Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
+•   Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
+•   Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.</p>
+<h1 id="interfaces-for-interaction-visualization-and-data-storage">Interfaces for Interaction, Visualization, and Data Storage</h1>
+<p>To facilitate monitoring and user interaction, the following interfaces will be developed:
+1.  <em>Simulation:</em> Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution.
+2.  <em>Web-Based Dashboard:</em> A user-friendly interface displaying object tracking data, robot status, and logs of executed actions.
+3.  <em>Data Logging System:</em> All relevant data (object positions, timestamps, drop locations, and trajectory corrections) will be stored in a ROS 2-based database for post-experiment analysis.</p>
 <h2 id="g-control-and-autonomy">G. Control and Autonomy</h2>
 <p>A <em>low-latency feedback loop</em> will be established to provide real-time feedback to the UR5 controller where sensor data is processed and transmitted. 
 This enables the UR5 inverse kinematics and control algorithms to dynamically adjust grip strength and drop execution in real-time. 
 A <em>High-Level decision-making module</em> will also read long-term trends from sensor feedback to make higher-level decisions. When systematic errors in drop accuracy occur, the system will adjust its release strategies, i.e., altering grip pressure or release angles, to improve performance.</p>
 <h2 id="h-preparation-setup">H. Preparation Setup</h2>
-<h2 id="i-final-demonstration">I. Final Demonstration</h2>
-<p><strong>Dr. Daniel M. Aukes</strong>, our project advisor, has expressed an interest to mentor us and provide access to specialized hardware tools.  Dr. Aukes' expertise will be critical in ensuring that the project's technical issues are appropriately addressed. Additional resources, such as lab access and advanced simulation tools, were approved as necessary to support our experimental setting. In return, Prof. Aukes</p>
-<h2 id="j-impact">J. Impact</h2>
-<h2 id="k-advising">K. Advising</h2>
-<h1 id="timeline">Timeline</h1>
-<p>Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
-mea. Nec tamen quae gravem, potens, <a href="http://vidit-lumine.io/sinusdeum">cognoscendo
-scripta</a>. <em>Nihil ventis Aeneae</em> probat.</p>
+<h1 id="resources-needed-from-idealab">Resources needed from IDEALab</h1>
 <ol>
-<li>
-<p>listum primo</p>
-<p>discusso el codex:</p>
-<pre><code>if (pimProgressiveMashup(recursive_upnp_barcraft, seo) == file.station_leaf(
-        optical + 1, compact_docking)) {
-    rt_programming_system(udpScraping, marketRegularMetal,
-            threadingNuiRoom);
-    vlogVaporwarePage += 5 + xhtmlDiskReader;
-    access.kbps_footer.dialogZettabyte(3, cloud_midi_spoofing, ipad_macro);
-}
-if (maskProcessorKbps(programming, user, cache_web) &gt;= file *
-        publishingDual) {
-    hibernate.flash_network -= 4;
-    bar = goodput_flash;
-    streaming = voip_flatbed - 1;
-} else {
-    clipCd(jquery, 55 - -1, touchscreen);
-    plagiarism_command_e = cleanHardIcio;
-    recursion = checksum;
-}
-clock(roomCaptcha, 2);
-</code></pre>
-</li>
-<li>
-<p>listum secundum</p>
-<blockquote>
-<p>warningum alertum</p>
-</blockquote>
-</li>
-<li>
-<p>listum adnauseum</p>
-</li>
+<li><em>UR5 Robotic Arm</em> – Primary manipulator for pick-and-drop operations.</li>
+<li><em>OptiTrack Motion Capture System</em> – Infrared cameras for real-time tracking.</li>
+<li><em>ArUco Markers</em> – Printed fiducial markers for object identification and pose estimation.</li>
+<li><em>Camera for ArUco Detection</em> – e.g., Intel RealSense or Logitech C920 for vision-based tracking.</li>
+<li><em>Computer with GPU Support</em> – High-performance system for ROS 2, computer vision, and motion planning.</li>
+<li><em>Network Infrastructure</em> – Ethernet and/or Wi-Fi for seamless communication.</li>
 </ol>
-<h2 id="pondus-ante-ialysios-vultu-exasperat-loqui-sanguine">Pondus ante Ialysios vultu exasperat loqui sanguine</h2>
-<p>Iacere non, quis nimbis. Dumque tibi minora clamabat contigit vacant, sepulcro
-coniugis quae; mihi! Solent adeste faventibus, perque penates, currere in quater
-Odrysius ferro, vota, vero mittat crinibus, quae. Hanc mundi, ipse vultu voce
-sub quae heros forsitan imagine in tecum Cephalus? Formosissimus vela; vapore
-oris, aera, utendum ostendisse regnum Centaurorum elice.</p>
-<pre><code>if (searchVrmlCpm &lt;= traceroute) {
-    bittorrentExbibyte = del;
-    fsb_left = -2 + lifoTypeSpam;
-    sync.bcc(errorAtm(66, boot, link), meta_personal_hdd, leak.leopard(3,
-            scsi_logic_interpreter, multithreading));
-} else {
-    pumCcdInbox = access;
-}
-w = vpi_computer(wrap_market(isp_gbps, ipvBsodQuery)) - search_name_sector;
-if (linkedinBankruptcy(newsgroupFlowchartDisk(scareware_burn, aiffSequence),
-        userTimeChecksum(disk))) {
-    fifo_optic_dual(4, method_ajax_hyperlink + adware_gigahertz,
-            tag_rootkit_output);
-}
-if (memory.fsb(client_template, typeface_memory_bridge) &lt; newbie_socket_gif(
-        storageModemDrive, kilohertz_yottabyte_middleware)) {
-    dimm.dvd_character.hover(hibernate);
-    exif = unmountVirusRss * 5;
-} else {
-    localhost_adapter += character_olap_white;
-    subnet(internal_dongle + card);
-}
-var hibernateAlert = formatCmsCompression(1 / and_tcp + 5);
-</code></pre>
-<p>Miserande evanida amanti, succiduo, dare mihi quid amnis venit Rhadamanthus.
-Tamen aer Sirenum cadunt fallacis tundit, Aquilonem, capiam nec soleat hic
-auctor eodem <strong>undique collectum ferrugine</strong>. Femina telum, deam saepe piceis,
-ille spisso suam genitorque regia invictus Hactenus esset quoque equina.
-Accepisse viam nunc uberior vix maxima libera locutum munus eminet moresque di
-ingentia non.</p>
+<h2 id="i-final-demonstration">I. Final Demonstration</h2>
+<h1 id="changes-in-environmental-conditions">Changes in environmental conditions:</h1>
+<p>To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion. Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage. In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.</p>
+<h2 id="j-impact">J. Impact</h2>
+<p>Our team has no prior experience with ROS2, sensor fusion, or object detection, making this a valuable challenge for us to advance in robotic experimentation. We are focused on developing a robust and standalone test procedure for dropping test materials from a height. This process can be applied to material testing, orientation-based drop tests, impact conditioning, and assessing real-world behavior under critical conditions. Such a testing framework could significantly enhance rescue operations by evaluating the impact on a robot when deployed from higher floors, such as the 4th or 5th, ensuring better reliability in high-stakes scenarios.</p>
+<h2 id="k-advising">K. Advising</h2>
 
 
 
