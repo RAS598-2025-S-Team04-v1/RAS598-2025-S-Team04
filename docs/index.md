@@ -1,5 +1,5 @@
 # Experimental Test Drop Setup Using UR5e Robot
-## A. ABOUT
+## A. About
 <table>
   <tr>
     <td>Team Number</td>
@@ -23,7 +23,7 @@
   </tr>
 </table>
 
-## B. The Project:
+## B. The Project
 
 The purpose of this experiment is to evaluate the drop accuracy and repeatability of a UR5e robotic arm in a controlled environment. The test aims to analyze the impact of varying release heights, grip configurations, and object characteristics on drop precision.
 
@@ -46,6 +46,22 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings]
 ```
+**Figure 1:** Process flow chart for the experiment.
+
+## E. Sensor Intergration
+
+## F. Interface
+
+## G. Control and Autonomy
+
+## H. Preparation Setup
+
+## I. Final Demonstration
+
+## J. Impact
+
+## K. Advising
+
 
     
 Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
