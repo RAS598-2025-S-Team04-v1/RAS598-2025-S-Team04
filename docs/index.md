@@ -51,14 +51,14 @@ graph TD
 ```
 >**Figure 1:** Process flow chart for the experiment.
 
-a. *Project Setup:* The UR5 robot arm is installed, with sensors and vision system ready to record data.
-b. *Define Experiment Parameters:* Reference points of drop locations and test objects with varying characteristics are selected.
-c. *ROS-Based Software Configuration:* The robot movements are configured using ROS2 software to ensure repeatability.
-d. *Conduct Experiment:* Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.
-e. *Data Collection:* Vision system and sensor data are collected, such as target point deviations.
-f. *Analysis:* Data are processed to determine how specified variables influence deviations.
-g. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation
-h. *Report Findings:* Findings are compiled, and conclusions are provided for future improvements.
+1. *Project Setup:* The UR5 robot arm is installed, with sensors and vision system ready to record data.
+2. *Define Experiment Parameters:* Reference points of drop locations and test objects with varying characteristics are selected.
+3. *ROS-Based Software Configuration:* The robot movements are configured using ROS2 software to ensure repeatability.
+4. *Conduct Experiment:* Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.
+5. *Data Collection:* Vision system and sensor data are collected, such as target point deviations.
+6. *Analysis:* Data are processed to determine how specified variables influence deviations.
+7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation
+8. *Report Findings:* Findings are compiled, and conclusions are provided for future improvements.
 
 ## E. Sensor Intergration
   This project aims to develop a ROS 2-based robotic manipulation system that integrates a UR5 robotic arm, *OptiTrack motion capture technology*, and *ArUco markers* for precise object tracking and manipulation. The goal is to enable the UR5 to autonomously pick up various test objects, identify them using ArUco marker detection, and drop them from a predefined height. ROS 2 will be used for motion planning, perception, and real-time communication, ensuring seamless coordination between different subsystems. This experiment will contribute to research in robotic grasping, object manipulation, and vision-based control.
@@ -69,9 +69,9 @@ h. *Report Findings:* Findings are compiled, and conclusions are provided for fu
 
 ## F. Interface
 The UR5 robotic arm will be controlled using ROS 2, leveraging MuJoCo for motion planning and custom ROS 2 nodes for real-time interaction. The behavior of the robot will be influenced through:
-•	Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
-•	Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
-•	Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.
+1. Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
+2. Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
+3. Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.
 
 ### Interfaces for Interaction, Visualization, and Data Storage
 To facilitate monitoring and user interaction, the following interfaces will be developed:
@@ -107,9 +107,9 @@ For a succesful execution we woulde require a solid understanding of Kinematics 
 
 ### Changes in environmental conditions:
 
-a. To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion.
-b. Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage.
-c. In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.
+1. To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion.
+2. Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage.
+3. In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.
 
 ## J. Impact
 
@@ -121,3 +121,4 @@ This process can be applied to material testing, orientation-based drop tests, i
 We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in providing mentoring and access to state-of-the-art hardware facilities. Dr. Aukes' guidance will be a key factor in ensuring the technical aspects of the project are addressed effectively. His demands involve regular progress tracking, strict adherence to project milestones, and active participation in troubleshooting sessions. Other facilities, such as laboratory access and state-of-the-art simulation tools, have been guaranteed to aid in our experimental setup.
 
 ### Timeline
+![Figure 3: Demonstation Setup](Schedule.png)
