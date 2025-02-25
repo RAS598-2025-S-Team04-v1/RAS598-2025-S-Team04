@@ -102,7 +102,7 @@ For a succesful execution we woulde require a solid understanding of Kinematics 
 6. *Network Infrastructure* – Ethernet and/or Wi-Fi for seamless communication.
 7. *Test Object* - Quadruped Robot or a prototype.
 
-
+![Figure 2: Demonstation Setup](DemoSetup.jpg)
 
 
 ### Changes in environmental conditions:
