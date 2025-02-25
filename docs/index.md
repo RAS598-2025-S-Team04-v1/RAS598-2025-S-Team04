@@ -25,15 +25,18 @@
 
 ## B. The Project
 
-The purpose of this experiment is to evaluate the drop accuracy and repeatability of a UR5e robotic arm in a controlled environment. The test aims to analyze the impact of varying release heights, grip configurations, and object characteristics on drop precision.
+The objective of this experiment is to validate the drop accuracy and consistency of a UR5 robot arm in a lab environment. This project will help investigate the impact of varying release heights, grip configurations, and object characteristics on drop accuracy.
 
 ## C. Research Question
-The central research question we seek to answer is: 
-"How accurately and consistently can a UR5 robotic system drop objects from predefined positions, and what factors influence its precision?".  
-This study aims to contribute to automation research by evaluating robotic handling performance in manufacturing and logistics applications.
+ 
+***"How accurately and consistently can a UR5 robotic system drop objects from predefined positions, and what factors influence its precision?".***  
+
+This study contributes to automation research by evaluating robotic handling performance in various manufacturing and logistics applications.
 
 ## D. Concept
-The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. The chart below shows the process flow chart of our project.
+The project involves configuring the UR5 robotic arm to drop test objects at predetermined positions. A vision system, in addition to sensors, will record drop points and trajectories. The analysis will be on the deviation from target points and how factors such as object weight, shape, and grip pressure influence it. ROS2 software will program the movements of the robot to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.
+
+
 
 ``` mermaid
 graph TD
@@ -48,21 +51,23 @@ graph TD
 ```
 **Figure 1:** Process flow chart for the experiment.
 
-a.	*Project Setup:* The UR5e robotic arm is configured, and the vision system and sensors are set up to record data.
-b.	*Define Experiment Parameters:* Target drop positions and test objects with varying properties are selected.
-c.	*ROS-Based Software Configuration:* The robot's movements are programmed using ROS-based software to ensure repeatability.
-d.	*Conduct Experiment:* The robotic arm releases test objects, and the vision system and sensors record the drop locations and trajectories.
-e.	*Data Collection:* Data from the vision system and sensors is collected, including deviations from target points.
-f.	*Analysis:* The data is analyzed to determine the influence of defined variables on deviations.
-g. *Iterate (if necessary):* If needed, the experiment is repeated with adjusted parameters for validation
-h. *Report Findings:* Results are summarized, and insights are provided for future improvements.
+a. *Project Setup:* The UR5 robot arm is installed, with sensors and vision system ready to record data.
+b. *Define Experiment Parameters:* Reference points of drop locations and test objects with varying characteristics are selected.
+c. *ROS-Based Software Configuration:* The robot movements are configured using ROS2 software to ensure repeatability.
+d. *Conduct Experiment:* Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.
+e. *Data Collection:* Vision system and sensor data are collected, such as target point deviations.
+f. *Analysis:* Data are processed to determine how specified variables influence deviations.
+g. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation
+h. *Report Findings:* Findings are compiled, and conclusions are provided for future improvements.
 
 ## E. Sensor Intergration
 
 ## F. Interface
 
 ## G. Control and Autonomy
-
+A *low-latency feedback loop* will be established to provide real-time feedback to the UR5 controller where sensor data is processed and transmitted. 
+This enables the UR5 inverse kinematics and control algorithms to dynamically adjust grip strength and drop execution in real-time. 
+A *High-Level decision-making module* will also read long-term trends from sensor feedback to make higher-level decisions. When systematic errors in drop accuracy occur, the system will adjust its release strategies, i.e., altering grip pressure or release angles, to improve performance.
 ## H. Preparation Setup
 
 ## I. Final Demonstration
