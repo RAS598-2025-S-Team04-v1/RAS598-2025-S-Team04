@@ -1,4 +1,4 @@
-# Experimental Test Drop Setup Using UR5e Robot
+# Experimental Test Drop Setup Using UR5 Robot
 ## A. About
 <table>
   <tr>
