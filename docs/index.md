@@ -1,5 +1,5 @@
 # Experimental Test Drop Setup Using UR5e Robot
-## ABOUT
+## A. ABOUT
 <table>
   <tr>
     <td>Team Number</td>
@@ -23,12 +23,31 @@
   </tr>
 </table>
 
-### The Project:
+## B. The Project:
 
 The purpose of this experiment is to evaluate the drop accuracy and repeatability of a UR5e robotic arm in a controlled environment. The test aims to analyze the impact of varying release heights, grip configurations, and object characteristics on drop precision.
 
-## Esse quoque sedem plena nunc iecur
+## C. Research Question
+The central research question we seek to answer is: 
+"How accurately and consistently can a UR5 robotic system drop objects from predefined positions, and what factors influence its precision?".  
+This study aims to contribute to automation research by evaluating robotic handling performance in manufacturing and logistics applications.
 
+## D. Concept
+The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. Fig 1. shows the process flow chart of our project.
+
+``` mermaid
+graph TD
+    A[Project Setup] --> B[Define Experiment Parameters]
+    B --> C[ROS-Based Software Configuration]
+    C --> D[Conduct Experiment]
+    D --> E[Data Collection]
+    E --> F[Analysis]
+    F --> G[Report Findings]
+    G --> H{Iterate?}
+    H -->|Yes| B
+    H -->|No| I[End]
+```
+    
 Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
 mea. Nec tamen quae gravem, potens, [cognoscendo
 scripta](http://vidit-lumine.io/sinusdeum). *Nihil ventis Aeneae* probat.
