@@ -662,23 +662,25 @@
 <blockquote>
 <p><strong>Figure 1:</strong> Process flow chart for the experiment.</p>
 </blockquote>
-<p>a. <em>Project Setup:</em> The UR5 robot arm is installed, with sensors and vision system ready to record data.
-b. <em>Define Experiment Parameters:</em> Reference points of drop locations and test objects with varying characteristics are selected.
-c. <em>ROS-Based Software Configuration:</em> The robot movements are configured using ROS2 software to ensure repeatability.
-d. <em>Conduct Experiment:</em> Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.
-e. <em>Data Collection:</em> Vision system and sensor data are collected, such as target point deviations.
-f. <em>Analysis:</em> Data are processed to determine how specified variables influence deviations.
-g. <em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation
-h. <em>Report Findings:</em> Findings are compiled, and conclusions are provided for future improvements.</p>
+<ol>
+<li><em>Project Setup:</em> The UR5 robot arm is installed, with sensors and vision system ready to record data.</li>
+<li><em>Define Experiment Parameters:</em> Reference points of drop locations and test objects with varying characteristics are selected.</li>
+<li><em>ROS-Based Software Configuration:</em> The robot movements are configured using ROS2 software to ensure repeatability.</li>
+<li><em>Conduct Experiment:</em> Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.</li>
+<li><em>Data Collection:</em> Vision system and sensor data are collected, such as target point deviations.</li>
+<li><em>Analysis:</em> Data are processed to determine how specified variables influence deviations.</li>
+<li><em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation</li>
+<li><em>Report Findings:</em> Findings are compiled, and conclusions are provided for future improvements.</li>
+</ol>
 <h2 id="e-sensor-intergration">E. Sensor Intergration</h2>
 <p>This project aims to develop a ROS 2-based robotic manipulation system that integrates a UR5 robotic arm, <em>OptiTrack motion capture technology</em>, and <em>ArUco markers</em> for precise object tracking and manipulation. The goal is to enable the UR5 to autonomously pick up various test objects, identify them using ArUco marker detection, and drop them from a predefined height. ROS 2 will be used for motion planning, perception, and real-time communication, ensuring seamless coordination between different subsystems. This experiment will contribute to research in robotic grasping, object manipulation, and vision-based control.</p>
 <p>The system will employ ArUco markers affixed to the test objects, allowing a camera-based ROS 2 node to detect, identify, and estimate their 6DoF pose. The OptiTrack motion capture system will provide additional high-precision localization feedback, which will be fused with the ArUco marker-based pose estimation for improved tracking accuracy. The robotic arm will adjust its approach dynamically based on real-time feedback from both ArUco marker tracking and OptiTrack data, ensuring robustness against positional variations and environmental disturbances.</p>
 <p>By leveraging ROS 2’s distributed architecture, this project will enhance robotic perception, closed-loop manipulation, and trajectory adaptation in real-time. The combination of vision-based tracking (ArUco) and motion capture (OptiTrack) will enable high-accuracy object handling, automated sorting, and advanced grasping strategies. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and autonomous material handling systems.</p>
 <h2 id="f-interface">F. Interface</h2>
 <p>The UR5 robotic arm will be controlled using ROS 2, leveraging MuJoCo for motion planning and custom ROS 2 nodes for real-time interaction. The behavior of the robot will be influenced through:
-•   Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
-•   Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
-•   Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.</p>
+1. Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
+2. Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
+3. Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.</p>
 <h3 id="interfaces-for-interaction-visualization-and-data-storage">Interfaces for Interaction, Visualization, and Data Storage</h3>
 <p>To facilitate monitoring and user interaction, the following interfaces will be developed:
 1.  <em>Simulation:</em> Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution.
@@ -703,15 +705,18 @@ A <em>High-Level decision-making module</em> will also read long-term trends fro
 </ol>
 <p><a class="glightbox" href="DemoSetup.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Figure 2: Demonstation Setup" src="DemoSetup.jpg" /></a></p>
 <h3 id="changes-in-environmental-conditions">Changes in environmental conditions:</h3>
-<p>a. To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion.
-b. Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage.
-c. In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.</p>
+<ol>
+<li>To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion.</li>
+<li>Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage.</li>
+<li>In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.</li>
+</ol>
 <h2 id="j-impact">J. Impact</h2>
 <p>Our team has no prior experience with ROS2, sensor fusion, or object detection, making this a valuable challenge for us to advance in robotic experimentation. We are focused on developing a robust and standalone test procedure for dropping test materials from a height. 
 This process can be applied to material testing, orientation-based drop tests, impact conditioning, and assessing real-world behavior under critical conditions. Such a testing framework could significantly enhance rescue operations by evaluating the impact on a robot when deployed from higher floors, such as the 4th or 5th, ensuring better reliability in high-stakes scenarios.</p>
 <h2 id="k-advising">K. Advising</h2>
 <p>We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in providing mentoring and access to state-of-the-art hardware facilities. Dr. Aukes' guidance will be a key factor in ensuring the technical aspects of the project are addressed effectively. His demands involve regular progress tracking, strict adherence to project milestones, and active participation in troubleshooting sessions. Other facilities, such as laboratory access and state-of-the-art simulation tools, have been guaranteed to aid in our experimental setup.</p>
 <h3 id="timeline">Timeline</h3>
+<p><a class="glightbox" href="Schedule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Figure 3: Demonstation Setup" src="Schedule.png" /></a></p>
 
 
 
