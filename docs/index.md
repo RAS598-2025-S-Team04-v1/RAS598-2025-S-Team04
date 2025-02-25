@@ -48,6 +48,15 @@ graph TD
 ```
 **Figure 1:** Process flow chart for the experiment.
 
+a.	*Project Setup:* The UR5e robotic arm is configured, and the vision system and sensors are set up to record data.
+b.	*Define Experiment Parameters:* Target drop positions and test objects with varying properties are selected.
+c.	*ROS-Based Software Configuration:* The robot's movements are programmed using ROS-based software to ensure repeatability.
+d.	*Conduct Experiment:* The robotic arm releases test objects, and the vision system and sensors record the drop locations and trajectories.
+e.	*Data Collection:* Data from the vision system and sensors is collected, including deviations from target points.
+f.	*Analysis:* The data is analyzed to determine the influence of defined variables on deviations.
+g. *Iterate (if necessary):* If needed, the experiment is repeated with adjusted parameters for validation
+h. *Report Findings:* Results are summarized, and insights are provided for future improvements.
+
 ## E. Sensor Intergration
 
 ## F. Interface
