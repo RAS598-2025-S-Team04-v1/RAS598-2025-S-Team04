@@ -474,17 +474,16 @@
 "How accurately and consistently can a UR5 robotic system drop objects from predefined positions, and what factors influence its precision?".<br />
 This study aims to contribute to automation research by evaluating robotic handling performance in manufacturing and logistics applications.</p>
 <h2 id="d-concept">D. Concept</h2>
-<p>The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. Fig 1. shows the process flow chart of our project.</p>
+<p>The project will involve configuring the UR5 robotic arm to release test objects at specific positions. A vision system, coupled with sensors, will record drop locations and trajectories. The analysis will focus on deviations from target points and the influence of variables such as object weight, shape, and grip strength. ROS2 software will be used to control the robot’s movements, ensuring repeatability in the experiment. The chart below shows the process flow chart of our project.</p>
 <pre class="mermaid"><code>graph TD
     A[Project Setup] --&gt; B[Define Experiment Parameters]
     B --&gt; C[ROS-Based Software Configuration]
     C --&gt; D[Conduct Experiment]
     D --&gt; E[Data Collection]
     E --&gt; F[Analysis]
-    F --&gt; G[Report Findings]
-    G --&gt; H{Iterate?}
-    H --&gt;|Yes| B
-    H --&gt;|No| I[End]</code></pre>
+    F --&gt; G{Iterate?}
+    G --&gt;|Yes| D
+    G --&gt;|No| H[Report Findings]</code></pre>
 <p>Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
 mea. Nec tamen quae gravem, potens, <a href="http://vidit-lumine.io/sinusdeum">cognoscendo
 scripta</a>. <em>Nihil ventis Aeneae</em> probat.</p>
