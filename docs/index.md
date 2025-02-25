@@ -49,7 +49,7 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings]
 ```
-**Figure 1:** Process flow chart for the experiment.
+>**Figure 1:** Process flow chart for the experiment.
 
 a. *Project Setup:* The UR5 robot arm is installed, with sensors and vision system ready to record data.
 b. *Define Experiment Parameters:* Reference points of drop locations and test objects with varying characteristics are selected.
@@ -71,13 +71,15 @@ A *High-Level decision-making module* will also read long-term trends from senso
 ## H. Preparation Setup
 
 ## I. Final Demonstration
+**Dr. Daniel M. Aukes**, our project advisor, has expressed an interest to mentor us and provide access to specialized hardware tools.  Dr. Aukes' expertise will be critical in ensuring that the project's technical issues are appropriately addressed. Additional resources, such as lab access and advanced simulation tools, were approved as necessary to support our experimental setting. In return, Prof. Aukes
 
 ## J. Impact
 
 ## K. Advising
 
 
-    
+# Timeline
+
 Possemque suos dumque. Deum recta rogantem, inquinat facta gigantas; ego nisi
 mea. Nec tamen quae gravem, potens, [cognoscendo
 scripta](http://vidit-lumine.io/sinusdeum). *Nihil ventis Aeneae* probat.
