@@ -49,7 +49,7 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings]
 ```
-**Figure 1:** Process flow chart for the experiment.
+>**Figure 1:** Process flow chart for the experiment.
 
 a. *Project Setup:* The UR5 robot arm is installed, with sensors and vision system ready to record data.
 b. *Define Experiment Parameters:* Reference points of drop locations and test objects with varying characteristics are selected.
