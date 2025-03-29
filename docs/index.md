@@ -1,4 +1,4 @@
-# Experimental Test Drop Setup Using UR5 Robot
+# Experimental Test Drop Setup Using OptiTrack and Force Gauge
 ## A. About
 <table>
   <tr>
@@ -25,7 +25,7 @@
 
 ## B. The Project
 
-The objective of this experiment is to validate the drop accuracy and consistency of a UR5 robot arm in a lab environment. This project will help investigate the impact of varying release heights, grip configurations, and object characteristics on drop accuracy.
+The objective of this experiment is to validate the stiffness and porjectile of the ankle of a pogo stick type model in a lab environment. This project will help investigate the impact of varying release heights, release angle, and object characteristics which will be used to establish parameters and compare to the simulations.
 
 ## C. Research Question
  
