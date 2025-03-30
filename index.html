@@ -646,10 +646,10 @@
 <h2 id="b-the-project">B. The Project</h2>
 <p>The objective of this experiment is to validate the stiffness and porjectile of the ankle of a pogo stick type model in a lab environment. This project will help investigate the impact of varying release heights, release angle, and object characteristics which will be used to establish parameters and compare to the simulations.</p>
 <h2 id="c-research-question">C. Research Question</h2>
-<p><strong><em>"How accurately and consistently can a UR5 robotic system drop objects from predefined positions, and what factors influence its precision?".</em></strong>  </p>
-<p>This study contributes to automation research by evaluating robotic handling performance in various manufacturing and logistics applications.</p>
+<p><strong><em>"How do we get simulation parameters to measure the stiffness and projectile of an ankle design for stability in a quadruped?"</em></strong>  </p>
+<p>This study contributes to modeling research by evaluating robotic parts designs in various manufacturing and logistics applications.</p>
 <h2 id="d-concept">D. Concept</h2>
-<p>The project involves configuring the UR5 robotic arm to drop test objects at predetermined positions. A vision system, in addition to sensors, will record drop points and trajectories. The analysis will be on the deviation from target points and how factors such as object weight, shape, and grip pressure influence it. ROS2 software will program the movements of the robot to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.</p>
+<p>The project involves using OptiTrack via ROS to drop test objects at predetermined positions. A vision system, will record drop points and trajectories and a force gauge is attached to the object to measure the stiffness and deformation. The analysis will be on the deviation in path deformations, how factors such as object weight and shape influence it and how it relates to the simulation readings. ROS2 software will use a node to publish the sensors to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.</p>
 <pre class="mermaid"><code>graph TD
     A[Project Setup] --&gt; B[Define Experiment Parameters]
     B --&gt; C[ROS-Based Software Configuration]
@@ -663,43 +663,39 @@
 <p><strong>Figure 1:</strong> Process flow chart for the experiment.</p>
 </blockquote>
 <ol>
-<li><em>Project Setup:</em> The UR5 robot arm is installed, with sensors and vision system ready to record data.</li>
-<li><em>Define Experiment Parameters:</em> Reference points of drop locations and test objects with varying characteristics are selected.</li>
-<li><em>ROS-Based Software Configuration:</em> The robot movements are configured using ROS2 software to ensure repeatability.</li>
-<li><em>Conduct Experiment:</em> Robotic arm drops test objects, with the sensors and vision system recording the drop locations and trajectories.</li>
-<li><em>Data Collection:</em> Vision system and sensor data are collected, such as target point deviations.</li>
-<li><em>Analysis:</em> Data are processed to determine how specified variables influence deviations.</li>
+<li><em>Project Setup:</em> The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a OptiTrack continaing IR reflectors and vision system ready to record data. An sound sensor is used to detect contact. A force gauge is also installed to measure deformation.</li>
+<li><em>Define Experiment Parameters:</em> Points of placement of reflector sensors are selected along with angles and heights to drop from.</li>
+<li><em>ROS-Based Software Configuration:</em> The data of the movement from the OptiTrack and the force gauge are published and subscribed via ROS2 software to visualize the data.</li>
+<li><em>Conduct Experiment:</em> The prototype is physically dropped, with the sensors and vision system recording the drop locations and trajectories, and deformation values.</li>
+<li><em>Data Collection:</em> Vision system and sensor data are collected, such as trajectories.</li>
+<li><em>Analysis:</em> Data are visualized on a graph using PyQT.</li>
 <li><em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation</li>
 <li><em>Report Findings:</em> Findings are compiled, and conclusions are provided for future improvements.</li>
 </ol>
 <h2 id="e-sensor-intergration">E. Sensor Intergration</h2>
-<p>This project aims to develop a ROS 2-based robotic manipulation system that integrates a UR5 robotic arm, <em>OptiTrack motion capture technology</em>, and <em>ArUco markers</em> for precise object tracking and manipulation. The goal is to enable the UR5 to autonomously pick up various test objects, identify them using ArUco marker detection, and drop them from a predefined height. ROS 2 will be used for motion planning, perception, and real-time communication, ensuring seamless coordination between different subsystems. This experiment will contribute to research in robotic grasping, object manipulation, and vision-based control.</p>
-<p>The system will employ ArUco markers affixed to the test objects, allowing a camera-based ROS 2 node to detect, identify, and estimate their 6DoF pose. The OptiTrack motion capture system will provide additional high-precision localization feedback, which will be fused with the ArUco marker-based pose estimation for improved tracking accuracy. The robotic arm will adjust its approach dynamically based on real-time feedback from both ArUco marker tracking and OptiTrack data, ensuring robustness against positional variations and environmental disturbances.</p>
-<p>By leveraging ROS 2’s distributed architecture, this project will enhance robotic perception, closed-loop manipulation, and trajectory adaptation in real-time. The combination of vision-based tracking (ArUco) and motion capture (OptiTrack) will enable high-accuracy object handling, automated sorting, and advanced grasping strategies. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and autonomous material handling systems.</p>
+<p>This project aims to develop a ROS 2-based robotic manipulation system that integrates <em>OptiTrack motion capture technology</em>, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS 2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in <em>MujoCo</em>.</p>
+<p>The OptiTrack motion capture system will provide for improved tracking. <br />
+  By leveraging ROS 2’s distributed architecture, this project will enhance trajectory adaptation in real-time. The combination of motion capture (OptiTrack) will enable high-accuracy object handling. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and testing.</p>
 <h2 id="f-interface">F. Interface</h2>
-<p>The UR5 robotic arm will be controlled using ROS 2, leveraging MuJoCo for motion planning and custom ROS 2 nodes for real-time interaction. The behavior of the robot will be influenced through:
-1. Vision-based Perception: ArUco marker tracking and OptiTrack motion capture data will be fused to provide high-accuracy object localization and ensure precise grasping.
-2. Adaptive Motion Planning: ROS 2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.
-3. Closed-loop Control: Sensor feedback, including force-torque sensing (if applicable), will enable the UR5 to refine its grasping and dropping strategy iteratively.</p>
+<p>The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation comparision and custom ROS2 nodes for real-time interaction. The behavior of the robot will be influenced through:
+1. Vision-based Perception: OptiTrack motion capture data will be fused to provide high-accuracy object localization.
+2. Adaptive Motion Planning: ROS2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.</p>
 <h3 id="interfaces-for-interaction-visualization-and-data-storage">Interfaces for Interaction, Visualization, and Data Storage</h3>
 <p>To facilitate monitoring and user interaction, the following interfaces will be developed:
 1.  <em>Simulation:</em> Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution.
-2.  <em>Web-Based Dashboard:</em> A user-friendly interface displaying object tracking data, robot status, and logs of executed actions.
+2.  <em>Web-Based Dashboard:</em> A user-friendly interface displaying object tracking data, and force gauge readings.
 3.  <em>Data Logging System:</em> All relevant data (object positions, timestamps, drop locations, and trajectory corrections) will be stored in a ROS 2-based database for post-experiment analysis.</p>
 <h2 id="g-control-and-autonomy">G. Control and Autonomy</h2>
 <p>A <em>low-latency feedback loop</em> will be established to provide real-time feedback to the UR5 controller where sensor data is processed and transmitted. 
 This enables the UR5 inverse kinematics and control algorithms to dynamically adjust grip strength and drop execution in real-time. 
 A <em>High-Level decision-making module</em> will also read long-term trends from sensor feedback to make higher-level decisions. When systematic errors in drop accuracy occur, the system will adjust its release strategies, i.e., altering grip pressure or release angles, to improve performance.</p>
 <h2 id="h-resources-needed">H. Resources needed</h2>
-<p>For a succesful execution we woulde require a solid understanding of Kinematics and Dynamics of UR5 robot. Since we heavily require camera sensing and sensor fusion, we would be needing knowledge about Control Systems and Autonomous Algorithms, Computer Vision, Object tracking and Sensor Fusion and Filtering Techniques. To run simulation for data, we would also need knowledge of Mujoco. Furthemore, self study and expert advice will go a long way in covering the gaps.</p>
+<p>Since we heavily require camera sensing and sensor fusion, we would be needing knowledge about Control Systems and Autonomous Algorithms, Computer Vision, Object tracking and Sensor Fusion and Filtering Techniques. To run simulations for data comparisions, we would also need knowledge of Mujoco. Furthemore, self study and expert advice will go a long way in covering the gaps.</p>
 <h2 id="i-final-demonstration">I. Final Demonstration</h2>
 <h3 id="resources-needed-from-idealab">Resources needed from IDEALab</h3>
 <ol>
-<li><em>UR5 Robotic Arm</em> – Primary manipulator for pick-and-drop operations.</li>
 <li><em>OptiTrack Motion Capture System</em> – Infrared cameras for real-time tracking.</li>
-<li><em>ArUco Markers</em> – Printed fiducial markers for object identification and pose estimation.</li>
-<li><em>Camera for ArUco Detection</em> – e.g., Intel RealSense or Logitech C920 for vision-based tracking.</li>
-<li><em>Computer with GPU Support</em> – High-performance system for ROS 2, computer vision, and motion planning.</li>
+<li><em>Computer with GPU Support</em> – High-performance system for ROS2 and computer vision.</li>
 <li><em>Network Infrastructure</em> – Ethernet and/or Wi-Fi for seamless communication.</li>
 <li><em>Test Object</em> - Quadruped Robot or a prototype.</li>
 </ol>
@@ -709,8 +705,7 @@ A <em>High-Level decision-making module</em> will also read long-term trends fro
 </blockquote>
 <h3 id="changes-in-environmental-conditions">Changes in environmental conditions:</h3>
 <ol>
-<li>To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and ArUco marker detection for precise local object tracking, ensuring robust localization even under occlusion.</li>
-<li>Closed-loop control mechanisms, including force-torque sensing (if available) or visual feedback, will refine grasping by adjusting grip strength based on object weight and slippage.</li>
+<li>To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and force gauge for precise local object tracking, ensuring robust localization and more research data.</li>
 <li>In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.</li>
 </ol>
 <h2 id="j-impact">J. Impact</h2>
