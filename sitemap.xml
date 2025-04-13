@@ -2,12 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <lastmod>2025-04-13</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/update1/</loc>
+         <lastmod>2025-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/static/node_modules/mathjax/</loc>
-         <lastmod>2025-03-30</lastmod>
+         <lastmod>2025-04-13</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
