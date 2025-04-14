@@ -517,7 +517,7 @@
     E --&gt; F[Analysis]
     F --&gt; G{Iterate?}
     G --&gt;|Yes| D
-    G --&gt;|No| H[Report Findings-find stiffness/trajectory]</code></pre>
+    G --&gt;|No| H[Report Findings-find stiffness]</code></pre>
 <blockquote>
 <p><strong>Figure 1:</strong> Process flow chart for the experiment.</p>
 </blockquote>
@@ -549,10 +549,8 @@
 <p>The hardware involved are:
 - <strong>Force Gauge:</strong> For this experiment, a high-precision digital force gauge is used, a <a href="https://mark-10.com/products/force-gauges/series-4/">Mark-10 M4-10 force gauge</a>. <br />
 - <strong>Displacement Measurement:</strong> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. 
-- <strong>Mounting Fixture:</strong> A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. 
-    Allows for controlled compression of the ankle ensuring consistent boundary conditions during each test.
-- <strong>Data Acquisition:</strong> 
-    Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.</p>
+- <strong>Mounting Fixture:</strong> A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. It allows for controlled compression of the ankle ensuring consistent boundary conditions during each test.
+- <strong>Data Acquisition:</strong> Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.</p>
 <h2 id="data-conditioning-and-analysis">Data Conditioning and Analysis:</h2>
 <ul>
 <li>
@@ -579,7 +577,14 @@ Data is converted into consistent SI units and normalized (if necessary) based o
 <!-- Needs an image of rqt_graph -->
 
 <h2 id="experimentation">Experimentation</h2>
-<p>Figure 1 (shown below) is an image of the GUI when performing the experiment. </p>
+<p>Figure 3 below is the GUI interface used for the experiment. It graphs a live plot of the data as it is being collected, and there are buttons along the bottom that users can press to save specific data points. There is also a live demonstration video included, showing how the data is pulled out in real time as the experiment is being performed.</p>
+<blockquote>
+<p><a class="glightbox" href="fgGUI.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="fgGUI.png" /></a>
+<strong>Figure 3:</strong> GUI of the force gauge setup</p>
+</blockquote>
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+frameborder="0" allowfullscreen></iframe>
 
 
 
