@@ -27,7 +27,7 @@
 
     
       
-        <title>Update #1 - 04/13/2025 - RAS598-Team04</title>
+        <title>Stiffness measurement setup - RAS598-Team04</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#update-1-04132025" class="md-skip">
+        <a href="#stiffness-measurement-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Update #1 - 04/13/2025
+              Stiffness measurement setup
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
     
   
-  Update #1 - 04/13/2025
+  Stiffness measurement setup
 
       </a>
     </li>
@@ -321,7 +321,7 @@
           
   
   <span class="md-ellipsis">
-    Update #1 - 04/13/2025
+    Stiffness measurement setup
   </span>
   
 
@@ -332,7 +332,7 @@
         
   
   <span class="md-ellipsis">
-    Update #1 - 04/13/2025
+    Stiffness measurement setup
   </span>
   
 
@@ -354,8 +354,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changes-in-goal-statement" class="md-nav__link">
-    Changes in goal statement
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration" class="md-nav__link">
+    Hardware Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-conditioning-and-analysis" class="md-nav__link">
+    Data Conditioning and Analysis:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-configuration" class="md-nav__link">
+    Software Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentation" class="md-nav__link">
+    Experimentation
   </a>
   
 </li>
@@ -395,8 +423,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#changes-in-goal-statement" class="md-nav__link">
-    Changes in goal statement
+  <a href="#about" class="md-nav__link">
+    About
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hardware-configuration" class="md-nav__link">
+    Hardware Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-conditioning-and-analysis" class="md-nav__link">
+    Data Conditioning and Analysis:
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-configuration" class="md-nav__link">
+    Software Configuration
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#experimentation" class="md-nav__link">
+    Experimentation
   </a>
   
 </li>
@@ -424,9 +480,52 @@
   
 
 
-<h1 id="update-1-04132025">Update #1 - 04/13/2025</h1>
-<h2 id="changes-in-goal-statement">Changes in goal statement</h2>
-<p>Previously we were of the idea of using a UR5 to test the repeatability and drop test our quadruped with an added ankle attachment for stability. But considering timeline and limitation constraints, we changed our goal statement to analyzing the position, orientation(drop trajectory) via OptiTrack and stiffness via force gauge. We will be physically dropping testing a part of the quadruped(the ankle sttachment) for the study. Sensor data which is filtered will be further analyzed and added as a simulation parameter for a MujoCo simulation adding on to research done by Prof. Aukes. </p>
+<h1 id="stiffness-measurement-setup">Stiffness measurement setup</h1>
+<h2 id="about">About</h2>
+<pre><code>The stiffness of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a force-displacement test setup. This setup is designed to find out loads to the ankle joint and measure the corresponding load, allowing the finding of accurate force-displacement points.
+</code></pre>
+<h2 id="hardware-configuration">Hardware Configuration</h2>
+<pre><code>The specimen or test object is fixated on the ground via supports and screws and via strings, the specimen is attached to the hook attachment of a Force Gauge which is placed horizontally and tensile forces are added onto the ankle component to get the reading.
+
+The Force Gauge will pass through a few marked displacement points and the force readings are plotted to find a best fit.
+
+The hardware involved are:
+</code></pre>
+<ul>
+<li><strong>Force Gauge:</strong> For this experiment, a high-precision digital force gauge is used, a <a href="https://mark-10.com/products/force-gauges/series-4/">Mark-10 M4-10 force gauge</a>.   </li>
+<li><strong>Displacement Measurement:</strong> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. </li>
+<li><strong>Mounting Fixture:</strong> A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. 
+    Allows for controlled compression of the ankle ensuring consistent boundary conditions during each test.</li>
+<li><strong>Data Acquisition:</strong> 
+    Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.</li>
+</ul>
+<h2 id="data-conditioning-and-analysis">Data Conditioning and Analysis:</h2>
+<ul>
+<li>
+<p><strong>Repeatability Check:</strong>
+Multiple trials are conducted under identical conditions to assess repeatability and account for any mechanical hysteresis or viscoelastic effects.</p>
+</li>
+<li>
+<p><strong>Units and Normalization:</strong>
+Data is converted into consistent SI units and normalized (if necessary) based on geometry or mass to enable direct comparison with simulation models.</p>
+</li>
+</ul>
+<h2 id="software-configuration">Software Configuration</h2>
+<p>The force gauge is connected to the system via serial communicator (USB provided by the manufacturer). </p>
+<p>The goal of using ROS2 is to serve three purposes
+- To visualize graphically the force readings.
+- Create a GUI and show the data have a button to start and stop recording. 
+- Upon pressing the button, the GUI will automatically create a <em>csv</em> and <em>ros2bag</em> file, useful for post-processing.</p>
+<p>Using ROS2 we created a publisher and subscriber nodes.
+- The <em>publisher node</em> will acess the data from the serial communicator and publish a topic '\force_reading' which continuously updates the force reading from the force gauge.
+- The <em>subscriber node</em> subscribes the topic and performs the following:
+    1. Visualizes graphically the force readings.
+    2. Create a GUI and show the data have a button to start and stop recording. 
+    3. Upon pressing the button, the GUI will automatically create a <em>csv</em> and <em>ros2bag</em> file, useful for post-processing.</p>
+<!-- Needs an image of rqt_graph -->
+
+<h2 id="experimentation">Experimentation</h2>
+<p>Figure 1 (shown below) is an image of the GUI when performing the experiment.</p>
 
 
 
