@@ -47,18 +47,6 @@ The project involves using two setups
 The experiment analyzes how factors such as object weight and shape influence it and how it relates to the simulation readings. ROS2 software will use a node to publish the sensors to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.
 
 
-
-``` mermaid
-graph TD
-    A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS2-Based Software Configuration]
-    C --> D[Conduct Experiment]
-    D --> E[Data Collection]
-    E --> F[Analysis]
-    F --> G{Iterate?}
-    G -->|Yes| D
-    G -->|No| H[Report Findings-find stiffness/trajectory]
-```
 >**Figure 1:** Process flow chart for the experiment.
 
 ### OptiTrack setup
