@@ -39,34 +39,58 @@ This study contributes to modeling research by evaluating robotic parts designs 
 
 ## D. Concept
 
-The project involves using OptiTrack via ROS to drop test objects at predetermined positions. A vision system, will record drop points and trajectories and a force gauge is attached to the object to measure the stiffness and deformation. The analysis will be on the deviation in path deformations, how factors such as object weight and shape influence it and how it relates to the simulation readings. ROS2 software will use a node to publish the sensors to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.
+The project involves using two setups 
+1. OptiTrack via ROS2 to drop test objects at predetermined positions. A vision system, will record drop points and trajectories
+2. A force gauge is attached to the test object to measure the stiffness and deformation. The setup will fixate the test object to the ground and force will be measured at different displacements which forms data to find the best fit for the stiffness of the prototype
+
+The experiment analyzes how factors such as object weight and shape influence it and how it relates to the simulation readings. ROS2 software will use a node to publish the sensors to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.
 
 
 
 ``` mermaid
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS-Based Software Configuration]
+    B --> C[ROS2-Based Software Configuration]
     C --> D[Conduct Experiment]
     D --> E[Data Collection]
     E --> F[Analysis]
     F --> G{Iterate?}
     G -->|Yes| D
-    G -->|No| H[Report Findings]
+    G -->|No| H[Report Findings(find stiffness/trajectory)]
 ```
 >**Figure 1:** Process flow chart for the experiment.
 
-1. *Project Setup:* The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a OptiTrack continaing IR reflectors and vision system ready to record data. An sound sensor is used to detect contact. A force gauge is also installed to measure deformation.
-2. *Define Experiment Parameters:* Points of placement of reflector sensors are selected along with angles and heights to drop from.
-3. *ROS-Based Software Configuration:* The data of the movement from the OptiTrack and the force gauge are published and subscribed via ROS2 software to visualize the data.
+### OptiTrack setup
+- *Project Setup:* The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a OptiTrack continaing IR reflectors and vision system ready to record data. 
+- *Define Experiment Parameters:* Points of placement of reflector sensors are selected along with angles and heights to drop from.
+- *ROS-Based Software Configuration:* The data of the movement from the OptiTrack are published and subscribed via ROS2 software to visualize the data. A GUI is also constructed using PyQT5 which will: 
+  - 1. Visualize the Data( 2-D Plot of Position and Orientation with respect to time).
+    2. Contain a button to start and stop recording
+    3. A recording system to save the data into a _bagfile_ or a _csv_ file.
 4. *Conduct Experiment:* The prototype is physically dropped, with the sensors and vision system recording the drop locations and trajectories, and deformation values.
 5. *Data Collection:* Vision system and sensor data are collected, such as trajectories.
 6. *Analysis:* Data are visualized on a graph using PyQT.
-7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation
-8. *Report Findings:* Findings are compiled, and conclusions are provided for future improvements.
+7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation.
+8. *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements.
 
+### Force Gauge setup
+- *Project Setup:* The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a Force Gauge ready to record data. 
+- *Define Experiment Parameters:* A setup in which the model is fixated to the gournd and a string is used to attached the leg and a hook of the force gauge. A set of displacement points are marked and the force gauge readings are taken at those points. The values are graphed out and the best fit is made to find the stifness. 
+
+
+- *ROS-Based Software Configuration:* The data of the Force readings are published and subscribed via ROS2 software to visualize the data. A GUI is also constructed using PyQT5 which will: 
+  - 1. Visualize the Data( 2-D Plot of Force data with respect to time).
+    2. Contain a button to start and stop recording
+    3. A recording system to save the data into a _bagfile_ or a _csv_ file.
+4. *Conduct Experiment:* The prototype is physically dropped, with the force gauge recording the force values with respect to time.
+5. *Data Collection:* Sensor data are collected, in this case Force and displacement.
+6. *Analysis:* Data are visualized on a graph using PyQT.
+7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation.
+8. *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements.
+>![](force_setup.jpg)
+>**Figure 2:** Setup for calculating. The displacements will be reache dvia human hand, preferably via an UR5 to reduce human error..
 ## E. Sensor Intergration
-  This project aims to develop a ROS 2-based robotic manipulation system that integrates *OptiTrack motion capture technology*, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS 2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in *MujoCo*.
+  This project aims to develop a ROS 2-based robotic manipulation system that integrates *OptiTrack motion capture technology*, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in *MujoCo*.
   
   The OptiTrack motion capture system will provide for improved tracking.   
   By leveraging ROS 2’s distributed architecture, this project will enhance trajectory adaptation in real-time. The combination of motion capture (OptiTrack) will enable high-accuracy object handling. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and testing.
@@ -97,6 +121,7 @@ Since we heavily require camera sensing and sensor fusion, we would be needing k
 ### Resources needed from IDEALab
 
 1. *OptiTrack Motion Capture System* – Infrared cameras for real-time tracking.
+2. *Force Gauge* - For studying stiffness.
 2. *Computer with GPU Support* – High-performance system for ROS2 and computer vision.
 6. *Network Infrastructure* – Ethernet and/or Wi-Fi for seamless communication.
 7. *Test Object* - Quadruped Robot or a prototype.
