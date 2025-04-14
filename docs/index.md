@@ -56,7 +56,7 @@ graph TD
     E --> F[Analysis]
     F --> G{Iterate?}
     G -->|Yes| D
-    G -->|No| H[Report Findings(find stiffness/trajectory)]
+    G -->|No| H[Report Findings-find stiffness/trajectory]
 ```
 >**Figure 1:** Process flow chart for the experiment.
 
