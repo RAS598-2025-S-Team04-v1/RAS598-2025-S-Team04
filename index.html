@@ -758,15 +758,6 @@
 1. OptiTrack via ROS2 to drop test objects at predetermined positions. A vision system, will record drop points and trajectories
 2. A force gauge is attached to the test object to measure the stiffness and deformation. The setup will fixate the test object to the ground and force will be measured at different displacements which forms data to find the best fit for the stiffness of the prototype</p>
 <p>The experiment analyzes how factors such as object weight and shape influence it and how it relates to the simulation readings. ROS2 software will use a node to publish the sensors to ensure repeatability in the experiment. The process flow chart of our project is shown in the chart below.</p>
-<pre class="mermaid"><code>graph TD
-    A[Project Setup] --&gt; B[Define Experiment Parameters]
-    B --&gt; C[ROS2-Based Software Configuration]
-    C --&gt; D[Conduct Experiment]
-    D --&gt; E[Data Collection]
-    E --&gt; F[Analysis]
-    F --&gt; G{Iterate?}
-    G --&gt;|Yes| D
-    G --&gt;|No| H[Report Findings-find stiffness/trajectory]</code></pre>
 <blockquote>
 <p><strong>Figure 1:</strong> Process flow chart for the experiment.</p>
 </blockquote>
