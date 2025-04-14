@@ -17,7 +17,7 @@ graph TD
     E --> F[Analysis]
     F --> G{Iterate?}
     G -->|Yes| D
-    G -->|No| H[Report Findings-find stiffness/trajectory]
+    G -->|No| H[Report Findings-find stiffness]
 ```
 >**Figure 1:** Process flow chart for the experiment.
 
@@ -46,10 +46,8 @@ The Force Gauge will pass through a few marked displacement points and the force
 The hardware involved are:
 - **Force Gauge:** For this experiment, a high-precision digital force gauge is used, a [Mark-10 M4-10 force gauge](https://mark-10.com/products/force-gauges/series-4/).   
 - **Displacement Measurement:** Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. 
-- **Mounting Fixture:** A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. 
-    Allows for controlled compression of the ankle ensuring consistent boundary conditions during each test.
-- **Data Acquisition:** 
-    Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.
+- **Mounting Fixture:** A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. It allows for controlled compression of the ankle ensuring consistent boundary conditions during each test.
+- **Data Acquisition:** Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.
 
 ## Data Conditioning and Analysis:
 
@@ -78,4 +76,11 @@ Using ROS2 we created a publisher and subscriber nodes.
 
 ## Experimentation
 
-Figure 1 (shown below) is an image of the GUI when performing the experiment. 
+Figure 3 below is the GUI interface used for the experiment. It graphs a live plot of the data as it is being collected, and there are buttons along the bottom that users can press to save specific data points. There is also a live demonstration video included, showing how the data is pulled out in real time as the experiment is being performed.
+
+>![](fgGUI.png)
+>**Figure 3:** GUI of the force gauge setup
+
+<iframe width="560" height="315" 
+src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+frameborder="0" allowfullscreen></iframe>
