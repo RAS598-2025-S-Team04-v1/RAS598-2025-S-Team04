@@ -3,6 +3,7 @@ Title: Overview
 ---
 
 # Experimental Test Drop Setup Using OptiTrack and Force Gauge
+Updated 04/13/2025
 ## A. About
 <table>
   <tr>
@@ -90,10 +91,12 @@ graph TD
 >![](force_setup.jpg)
 >**Figure 2:** Setup for calculating. The displacements will be reache dvia human hand, preferably via an UR5 to reduce human error..
 ## E. Sensor Intergration
+  
   This project aims to develop a ROS 2-based robotic manipulation system that integrates *OptiTrack motion capture technology*, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in *MujoCo*.
   
   The OptiTrack motion capture system will provide for improved tracking.   
   By leveraging ROS 2’s distributed architecture, this project will enhance trajectory adaptation in real-time. The combination of motion capture (OptiTrack) will enable high-accuracy object handling. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and testing.
+
 
 ## F. Interface
 The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation comparision and custom ROS2 nodes for real-time interaction. The behavior of the robot will be influenced through:
@@ -146,3 +149,9 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 ### Timeline
 >![](Schedule.png)
 >**Figure 3:** Tentative Schedule.
+
+## Update #1 - 04/13/2025
+
+### Changes in goal statement
+
+Previously, we were of the idea of using a UR5 to test the repeatability and drop test our quadruped with an added ankle attachment for stability. But considering timeline and limitation constraints, we changed our goal statement to analyzing the position, orientation(drop trajectory) via OptiTrack and stiffness via force gauge. We will be physically dropping testing a part of the quadruped(the ankle sttachment) for the study. Sensor data which is filtered will be further analyzed and added as a simulation parameter for a MujoCo simulation adding on to research done by Prof. Aukes. 
