@@ -6,15 +6,15 @@ Title: Force Gauge
 
 ## About
     
-    The stiffness of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a force-displacement test setup. This setup is designed to find out loads to the ankle joint and measure the corresponding load, allowing the finding of accurate force-displacement points.
+The stiffness of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a force-displacement test setup. This setup is designed to find out loads to the ankle joint and measure the corresponding load, allowing the finding of accurate force-displacement points.
 
 ## Hardware Configuration
     
-    The specimen or test object is fixated on the ground via supports and screws and via strings, the specimen is attached to the hook attachment of a Force Gauge which is placed horizontally and tensile forces are added onto the ankle component to get the reading. 
-    
-    The Force Gauge will pass through a few marked displacement points and the force readings are plotted to find a best fit. 
+The specimen or test object is fixated on the ground via supports and screws and via strings, the specimen is attached to the hook attachment of a Force Gauge which is placed horizontally and tensile forces are added onto the ankle component to get the reading. 
 
-    The hardware involved are:
+The Force Gauge will pass through a few marked displacement points and the force readings are plotted to find a best fit. 
+
+The hardware involved are:
 - **Force Gauge:** For this experiment, a high-precision digital force gauge is used, a [Mark-10 M4-10 force gauge](https://mark-10.com/products/force-gauges/series-4/).   
 - **Displacement Measurement:** Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. 
 - **Mounting Fixture:** A custom test rig is bult to hold the ankle in position which will isolate the axis along which the stiffness is being tested. 
