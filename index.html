@@ -16,7 +16,7 @@
       
       
       
-        <link rel="next" href="update1/">
+        <link rel="next" href="ForceGauge/">
       
       
       <link rel="icon" href="assets/images/favicon.png">
@@ -220,12 +220,12 @@
   
   
     <li class="md-tabs__item">
-      <a href="update1/" class="md-tabs__link">
+      <a href="ForceGauge/" class="md-tabs__link">
         
   
     
   
-  Stiffness measurement setup
+  Stiffness Measurement via Force Gauge and ROS2
 
       </a>
     </li>
@@ -370,13 +370,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#force-gauge-setup" class="md-nav__link">
-    Force Gauge setup
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -511,11 +504,11 @@
   
   
     <li class="md-nav__item">
-      <a href="update1/" class="md-nav__link">
+      <a href="ForceGauge/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Stiffness measurement setup
+    Stiffness Measurement via Force Gauge and ROS2
   </span>
   
 
@@ -582,13 +575,6 @@
           <li class="md-nav__item">
   <a href="#optitrack-setup" class="md-nav__link">
     OptiTrack setup
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#force-gauge-setup" class="md-nav__link">
-    Force Gauge setup
   </a>
   
 </li>
@@ -802,32 +788,6 @@
 <li><em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation.</li>
 <li><em>Report Findings:</em> Findings are compiled, and conclusions are provided for simulations and future improvements.</li>
 </ul>
-<h3 id="force-gauge-setup">Force Gauge setup</h3>
-<ul>
-<li><em>Project Setup:</em> The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a Force Gauge ready to record data. </li>
-<li>
-<p><em>Define Experiment Parameters:</em> A setup in which the model is fixated to the gournd and a string is used to attached the leg and a hook of the force gauge. A set of displacement points are marked and the force gauge readings are taken at those points. The values are graphed out and the best fit is made to find the stifness. </p>
-</li>
-<li>
-<p><em>ROS-Based Software Configuration:</em> The data of the Force readings are published and subscribed via ROS2 software to visualize the data. A GUI is also constructed using PyQT5 which will: </p>
-</li>
-<li>
-<ol>
-<li>Visualize the Data( 2-D Plot of Force data with respect to time).</li>
-<li>Contain a button to start and stop recording</li>
-<li>A recording system to save the data into a <em>bagfile</em> or a <em>csv</em> file.</li>
-</ol>
-</li>
-<li><em>Conduct Experiment:</em> The prototype is physically dropped, with the force gauge recording the force values with respect to time.</li>
-<li><em>Data Collection:</em> Sensor data are collected, in this case Force and displacement.</li>
-<li><em>Analysis:</em> Data are visualized on a graph using PyQT.</li>
-<li><em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation.</li>
-<li><em>Report Findings:</em> Findings are compiled, and conclusions are provided for simulations and future improvements.<blockquote>
-<p><a class="glightbox" href="force_setup.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="force_setup.jpg" /></a>
-<strong>Figure 2:</strong> Setup for calculating. The displacements will be reache dvia human hand, preferably via an UR5 to reduce human error..</p>
-</blockquote>
-</li>
-</ul>
 <h2 id="e-sensor-intergration">E. Sensor Intergration</h2>
 <p>This project aims to develop a ROS 2-based robotic manipulation system that integrates <em>OptiTrack motion capture technology</em>, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in <em>MujoCo</em>.</p>
 <p>The OptiTrack motion capture system will provide for improved tracking. <br />
@@ -906,13 +866,13 @@ This process can be applied to material testing, orientation-based drop tests, i
         
         
           
-          <a href="update1/" class="md-footer__link md-footer__link--next" aria-label="Next: Stiffness measurement setup" rel="next">
+          <a href="ForceGauge/" class="md-footer__link md-footer__link--next" aria-label="Next: Stiffness Measurement via Force Gauge and ROS2" rel="next">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Stiffness measurement setup
+                Stiffness Measurement via Force Gauge and ROS2
               </div>
             </div>
             <div class="md-footer__button md-icon">

@@ -12,7 +12,7 @@
       
       
       
-        <link rel="canonical" href="https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/update1/">
+        <link rel="canonical" href="https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/ForceGauge/">
       
       
         <link rel="prev" href="..">
@@ -27,7 +27,7 @@
 
     
       
-        <title>Stiffness measurement setup - RAS598-Team04</title>
+        <title>Stiffness Measurement via Force Gauge and ROS2 - RAS598-Team04</title>
       
     
     
@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#stiffness-measurement-setup" class="md-skip">
+        <a href="#stiffness-measurement-via-force-gauge-and-ros2" class="md-skip">
           Skip to content
         </a>
       
@@ -127,7 +127,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Stiffness measurement setup
+              Stiffness Measurement via Force Gauge and ROS2
             
           </span>
         </div>
@@ -225,7 +225,7 @@
   
     
   
-  Stiffness measurement setup
+  Stiffness Measurement via Force Gauge and ROS2
 
       </a>
     </li>
@@ -321,7 +321,7 @@
           
   
   <span class="md-ellipsis">
-    Stiffness measurement setup
+    Stiffness Measurement via Force Gauge and ROS2
   </span>
   
 
@@ -332,7 +332,7 @@
         
   
   <span class="md-ellipsis">
-    Stiffness measurement setup
+    Stiffness Measurement via Force Gauge and ROS2
   </span>
   
 
@@ -357,6 +357,19 @@
   <a href="#about" class="md-nav__link">
     About
   </a>
+  
+    <nav class="md-nav" aria-label="About">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#force-gauge-setup" class="md-nav__link">
+    Force Gauge setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -427,6 +440,19 @@
     About
   </a>
   
+    <nav class="md-nav" aria-label="About">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#force-gauge-setup" class="md-nav__link">
+    Force Gauge setup
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -472,7 +498,7 @@
                   
 
   
-    <a href="https://github.com/RAS598-2025-S-Team04-v1/RAS598-2025-S-Team04/edit/main/docs/update1.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/RAS598-2025-S-Team04-v1/RAS598-2025-S-Team04/edit/main/docs/ForceGauge.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -480,9 +506,43 @@
   
 
 
-<h1 id="stiffness-measurement-setup">Stiffness measurement setup</h1>
+<h1 id="stiffness-measurement-via-force-gauge-and-ros2">Stiffness Measurement via Force Gauge and ROS2</h1>
 <h2 id="about">About</h2>
 <p>The stiffness of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a force-displacement test setup. This setup is designed to find out loads to the ankle joint and measure the corresponding load, allowing the finding of accurate force-displacement points.</p>
+<pre class="mermaid"><code>graph TD
+    A[Project Setup] --&gt; B[Define Experiment Parameters]
+    B --&gt; C[ROS2-Based Software Configuration]
+    C --&gt; D[Conduct Experiment]
+    D --&gt; E[Data Collection]
+    E --&gt; F[Analysis]
+    F --&gt; G{Iterate?}
+    G --&gt;|Yes| D
+    G --&gt;|No| H[Report Findings-find stiffness/trajectory]</code></pre>
+<blockquote>
+<p><strong>Figure 1:</strong> Process flow chart for the experiment.</p>
+</blockquote>
+<h3 id="force-gauge-setup">Force Gauge setup</h3>
+<ul>
+<li><em>Project Setup:</em> The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a Force Gauge ready to record data. </li>
+<li><em>Define Experiment Parameters:</em> A setup in which the model is fixated to the gournd and a string is used to attached the leg and a hook of the force gauge. A set of displacement points are marked and the force gauge readings are taken at those points. The values are graphed out and the best fit is made to find the stifness. </li>
+<li><em>ROS-Based Software Configuration:</em> The data of the Force readings are published and subscribed via ROS2 software to visualize the data. A GUI is also constructed using PyQT5 which will: </li>
+<li>
+<ol>
+<li>Visualize the Data( 2-D Plot of Force data with respect to time).</li>
+<li>Contain a button to start and stop recording</li>
+<li>A recording system to save the data into a <em>bagfile</em> or a <em>csv</em> file.</li>
+</ol>
+</li>
+<li><em>Conduct Experiment:</em> The prototype is physically dropped, with the force gauge recording the force values with respect to time.</li>
+<li><em>Data Collection:</em> Sensor data are collected, in this case Force and displacement.</li>
+<li><em>Analysis:</em> Data are visualized on a graph using PyQT.</li>
+<li><em>Iterate (if necessary):</em> Conduct experiments with adjusted parameters if needed for confirmation.</li>
+<li><em>Report Findings:</em> Findings are compiled, and conclusions are provided for simulations and future improvements.</li>
+</ul>
+<blockquote>
+<p><a class="glightbox" href="../force_setup.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../force_setup.jpg" /></a>
+<strong>Figure 2:</strong> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.</p>
+</blockquote>
 <h2 id="hardware-configuration">Hardware Configuration</h2>
 <p>The specimen or test object is fixated on the ground via supports and screws and via strings, the specimen is attached to the hook attachment of a Force Gauge which is placed horizontally and tensile forces are added onto the ankle component to get the reading. </p>
 <p>The Force Gauge will pass through a few marked displacement points and the force readings are plotted to find a best fit. </p>
@@ -513,13 +573,13 @@ Data is converted into consistent SI units and normalized (if necessary) based o
 <p>Using ROS2 we created a publisher and subscriber nodes.
 - The <em>publisher node</em> will acess the data from the serial communicator and publish a topic '\force_reading' which continuously updates the force reading from the force gauge.
 - The <em>subscriber node</em> subscribes the topic and performs the following:
-    1. Visualizes graphically the force readings.
-    2. Create a GUI and show the data have a button to start and stop recording. 
-    3. Upon pressing the button, the GUI will automatically create a <em>csv</em> and <em>ros2bag</em> file, useful for post-processing.</p>
+1. Visualizes graphically the force readings.  <br />
+2. Create a GUI and show the data have a button to start and stop recording. 
+3. Upon pressing the button, the GUI will automatically create a <em>csv</em> and <em>ros2bag</em> file, useful for post-processing.</p>
 <!-- Needs an image of rqt_graph -->
 
 <h2 id="experimentation">Experimentation</h2>
-<p>Figure 1 (shown below) is an image of the GUI when performing the experiment.</p>
+<p>Figure 1 (shown below) is an image of the GUI when performing the experiment. </p>
 
 
 
