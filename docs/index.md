@@ -74,22 +74,6 @@ graph TD
 7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation.
 8. *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements.
 
-### Force Gauge setup
-- *Project Setup:* The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with a Force Gauge ready to record data. 
-- *Define Experiment Parameters:* A setup in which the model is fixated to the gournd and a string is used to attached the leg and a hook of the force gauge. A set of displacement points are marked and the force gauge readings are taken at those points. The values are graphed out and the best fit is made to find the stifness. 
-
-
-- *ROS-Based Software Configuration:* The data of the Force readings are published and subscribed via ROS2 software to visualize the data. A GUI is also constructed using PyQT5 which will: 
-  - 1. Visualize the Data( 2-D Plot of Force data with respect to time).
-    2. Contain a button to start and stop recording
-    3. A recording system to save the data into a _bagfile_ or a _csv_ file.
-4. *Conduct Experiment:* The prototype is physically dropped, with the force gauge recording the force values with respect to time.
-5. *Data Collection:* Sensor data are collected, in this case Force and displacement.
-6. *Analysis:* Data are visualized on a graph using PyQT.
-7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation.
-8. *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements.
->![](force_setup.jpg)
->**Figure 2:** Setup for calculating. The displacements will be reache dvia human hand, preferably via an UR5 to reduce human error..
 ## E. Sensor Intergration
   
   This project aims to develop a ROS 2-based robotic manipulation system that integrates *OptiTrack motion capture technology*, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in *MujoCo*.
