@@ -120,8 +120,8 @@ graph TD
 <br>
 
 <p align="center">
-  <img src="fgGui.jpg" width="300"/><br>
-  <b>Figure :</b> Force Gauge (recently updated)
+  ![ros2](.docs/rosgraph.png)
+  <b>Figure:</b> Force Gauge
 </p>
 
 <br>
