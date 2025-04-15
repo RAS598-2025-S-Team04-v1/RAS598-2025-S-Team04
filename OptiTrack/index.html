@@ -393,13 +393,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flowchart" class="md-nav__link">
-    Flowchart
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#optitrack-setup" class="md-nav__link">
     OptiTrack Setup
   </a>
@@ -501,13 +494,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#flowchart" class="md-nav__link">
-    Flowchart
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#optitrack-setup" class="md-nav__link">
     OptiTrack Setup
   </a>
@@ -603,22 +589,6 @@ The stability of the ankle in the pogo stick-type model is characterized through
 </div>
 
 <p><br></p>
-<h2 id="flowchart">Flowchart</h2>
-<div align="center">
-<div class="mermaid">
-graph TD
-    A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS2-Based Software Configuration]
-    C --> D[Conduct Experiment]
-    D --> E[Data Collection]
-    E --> F[Analysis]
-    F --> G{Iterate?}
-    G -->|Yes| D
-    G -->|No| H[Report Findings-find trajectory]
-</div>
-</div>
-
-<p><br></p>
 <h2 id="optitrack-setup">OptiTrack Setup</h2>
 <div style="text-align: justify;">
 - <b>Project Setup:</b> The setup contains an object which, for this project, is a prototype of an ankle + leg of a quadruped similar to a pogostick model, with reflective markers to facilitate OptiTrack in capturing the data. <br><br>
@@ -681,16 +651,44 @@ The specimen or test object is physically dropped at a fixed height and angle, a
 
 <p><br></p>
 <h2 id="node-communication">Node Communication</h2>
-<div align="center">
-<div class="mermaid">
+<p><head>
+  <meta charset="UTF-8">
+  <title>Mermaid Flowchart Example</title>
+<br />
+<script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script></p>
+<style>
+    /* Optional: center the flowchart container */
+    .chart-container {
+      text-align: center;
+    }
+  </style>
+<p> <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head></p>
+<body>
+  <div class="chart-container">
+    <div class="mermaid">
 graph LR
   OPTI[/optitrack_node/] --> POSE[/ankle/pose/]
   POSE --> FILTER[/filter_node/]
   FILTER --> POSEF[/ankle/pose_filtered/]
   FILTER --> VEL[/ankle/velocity/]
   FILTER --> ACC[/ankle/acceleration/]
-</div>
-</div>
+    </div>
+  </div>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 
 <p><br></p>
 <h2 id="experimentation">Experimentation</h2>
@@ -791,7 +789,5 @@ OptiTrack was calibrated for our controlled environment. The video below shows o
         <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
-  <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+  </body>
 </html>
