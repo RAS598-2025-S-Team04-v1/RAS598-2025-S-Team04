@@ -16,9 +16,15 @@
 
 <br>
 
-<!-- Mermaid flowchart -->
-<pre>
-<code class="language-mermaid">
+<head>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+</head>
+<body>
+
+<div class="mermaid">
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
     B --> C[ROS2-Based Software Configuration]
@@ -27,9 +33,10 @@ graph TD
     E --> F[Analysis]
     F --> G{Iterate?}
     G -->|Yes| D
-    G -->|No| H[Report Findings-find stiffness]
-</code>
-</pre>
+    G -->|No| H[Report Findings - find stiffness]
+</div>
+
+</body>
 
 <div align="center">
   <b>Figure 1:</b> Process flow chart for the experiment.
