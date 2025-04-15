@@ -94,7 +94,7 @@ The experiment analyzes how factors such as object weight and shape influence it
 
 <div style="text-align: justify;">
 
-This project aims to develop a ROS 2-based robotic manipulation system that integrates *OptiTrack motion capture technology*, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in MujoCo.<br>
+This project aims to develop a ROS 2-based robotic manipulation system that integrates <b> OptiTrack motion capture technology </b>, and force gauge for measuring simulation parameters. The goal is to drop them from a random height and angle and utilize the OptiTrack and find the projected trajectories. ROS2 will be used for processing and obtaining sensor information and real-time communication, ensuring seamless coordination between different sensor data. This experiment will help in supporting the simulation data of a similar model in MujoCo.<br>
 
 The OptiTrack motion capture system will provide for improved tracking. By leveraging ROS 2’s distributed architecture, this project will enhance trajectory adaptation in real-time. The combination of motion capture (OptiTrack) will enable high-accuracy object handling. The findings from this experiment will have broader applications in industrial automation, assistive robotics, and testing.
 
@@ -108,7 +108,7 @@ The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation co
 <b> 1. </b> Vision-based Perception: OptiTrack motion capture data will be fused to provide high-accuracy object localization.<br> 
 <b> 2. </b> Adaptive Motion Planning: ROS2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.<br>
 
-### Interfaces for Interaction, Visualization, and Data Storage
+<h4> Interfaces for Interaction, Visualization, and Data Storage </h4>
 To facilitate monitoring and user interaction, the following interfaces will be developed: <br><br>
 <b> 1.  Simulation: </b> Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution. <br>  
 <b> 2. Web-Based Dashboard: </b> A user-friendly interface displaying object tracking data, and force gauge readings.  <br>
