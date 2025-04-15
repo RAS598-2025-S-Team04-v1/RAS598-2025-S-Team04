@@ -128,7 +128,7 @@ graph TD
 </div>
 
 <div align="center">
-  <img src="rosgraph.png" alt="Force Gauge GUI"><br>
+  <img src="rosgraph.jpg" alt="Force Gauge GUI"><br>
   <b>Figure 4:</b> GUI of the force gauge setup
 </div>
 
@@ -143,7 +143,7 @@ graph TD
 <br>
 
 <div align="center">
-  <img src="fgGUI.png" alt="Force Gauge GUI"><br>
+  <img src="fgGUI.jpg" alt="Force Gauge GUI"><br>
   <b>Figure 5:</b> GUI of the force gauge setup
 </div>
 
