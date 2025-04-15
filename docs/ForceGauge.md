@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Force Gauge</title>
@@ -149,4 +147,3 @@ graph TD
 </div>
 
 </body>
-</html>
