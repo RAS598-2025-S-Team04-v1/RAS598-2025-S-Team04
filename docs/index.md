@@ -137,12 +137,10 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 
 ### Timeline
 
-<div align="center">
+<p align="center">
+  <img src="Schedule.png" width="300"/>
+</p>
 
->![](Schedule.png)  
->**Figure 3:** Tentative Schedule
-
-</div>
 
 ## Update #1 - 04/13/2025
 
