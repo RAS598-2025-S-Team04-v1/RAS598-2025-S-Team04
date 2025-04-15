@@ -648,14 +648,12 @@ Data is converted into consistent SI units and normalized (if necessary) based o
 <li>Velocity and accelerationa can be computed via numerical differentiation after filtering.</li>
 </ul>
 <p>Below is an graph of the communications of nodes in ROS2</p>
-<p>''' mermaid
-graph LR
+<pre class="mermaid"><code>graph LR
   OPTI[/optitrack_node/] --&gt; POSE[/ankle/pose/]
   POSE --&gt; FILTER[/filter_node/]
   FILTER --&gt; POSEF[/ankle/pose_filtered/]
   FILTER --&gt; VEL[/ankle/velocity/]
-  FILTER --&gt; ACC[/ankle/acceleration/]
-'''</p>
+  FILTER --&gt; ACC[/ankle/acceleration/]</code></pre>
 <!-- Needs an image of rqt_graph -->
 
 <h2 id="experimentation">Experimentation</h2>
