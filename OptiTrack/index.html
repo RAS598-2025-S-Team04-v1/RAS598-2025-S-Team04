@@ -91,7 +91,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#about" class="md-skip">
+        <a href="#optitrack-setup" class="md-skip">
           Skip to content
         </a>
       
@@ -386,20 +386,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flowchart" class="md-nav__link">
-    Flowchart
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#optitrack-setup" class="md-nav__link">
     OptiTrack Setup
   </a>
@@ -494,20 +480,6 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#flowchart" class="md-nav__link">
-    Flowchart
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#optitrack-setup" class="md-nav__link">
     OptiTrack Setup
   </a>
@@ -597,27 +569,6 @@
   <h3>Updated 04/14/2025</h3>
 </div>
 
-<h2 id="about">About</h2>
-<div style="text-align: justify;">
-The stability of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a Motion Capture setup. This setup is designed to find out the trajectory and stability of our designed ankle design using OptiTrack.
-</div>
-
-<p><br></p>
-<h2 id="flowchart">Flowchart</h2>
-<div align="center">
-<div class="mermaid">
-graph TD
-    A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS2-Based Software Configuration]
-    C --> D[Conduct Experiment]
-    D --> E[Data Collection]
-    E --> F[Analysis]
-    F --> G{Iterate?}
-    G -->|Yes| D
-    G -->|No| H[Report Findings-find trajectory]
-</div>
-</div>
-
 <p><br></p>
 <h2 id="optitrack-setup">OptiTrack Setup</h2>
 <div style="text-align: justify;">
@@ -637,16 +588,16 @@ graph TD
 <p><br></p>
 <p align="center">
   <a class="glightbox" href="force_setup.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img src="force_setup.jpg" alt="OptiTrack Setup" width="500"></a><br>
-  <b>Figure 2:</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
+  <b>Figure :</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
 </p>
 
 <p><br></p>
 <h2 id="hardware-configuration">Hardware Configuration</h2>
 <div style="text-align: justify;">
 The specimen or test object is physically dropped at a fixed height and angle, and the reflective markers on the specimen measure its movement in the controlled space and its contact with the ground. This helps study the stability of the ankle attachment. <br><br>
-<b>Hardware involved:</b><br>
+<b>Hardware involved:</b><br><br>
 - <b>OptiTrack:</b> Reflective IR markers and a specialized IR camera setup to accurately track the markers.<br>
-- <b>Mounting Fixture:</b> The specimen is held by hand and is free-fallen onto the ground.<br>
+- <b>Mounting Fixture:</b> The specimen is held by hand and is free-fallen onto the ground.<br><br>
 - <b>Data Acquisition:</b> Data is acquired from the MOTIVE software and transmitted via Ethernet.
 </div>
 
