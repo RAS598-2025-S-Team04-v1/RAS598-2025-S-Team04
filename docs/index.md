@@ -60,7 +60,7 @@ This study contributes to modeling research by evaluating robotic parts designs 
 
 <div style="text-align: justify;">
 
-The project involves using two setups:
+The project involves using two setups:<br><br>
 <b>1.</b> OptiTrack via ROS2 to drop test objects at predetermined positions. A vision system, will record drop points and trajectories <br>
 <b>2.</b> A force gauge is attached to the test object to measure the stiffness and deformation. The setup will fixate the test object to the ground and force will be measured at different displacements which forms data to find the best fit for the stiffness of the prototype<br><br>
 
@@ -83,10 +83,10 @@ The experiment analyzes how factors such as object weight and shape influence it
   2. Contain a button to start and stop recording  <br>
   3. A recording system to save the data into a _bagfile_ or a _csv_ file <br><br>  
 - <b> Conduct Experiment: </b> The prototype is physically dropped, with the sensors and vision system recording the drop locations and trajectories, and deformation values<br>  
-- *Data Collection:* Vision system and sensor data are collected, such as trajectories <br>  
-- *Analysis:* Data are visualized on a graph using PyQT <br>
-- *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation <br>
-- *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements <br>
+- <b> Data Collection: </b> Vision system and sensor data are collected, such as trajectories <br>  
+- <b> Analysis: </b> Data are visualized on a graph using PyQT <br>
+- <b> Iterate (if necessary): </b> Conduct experiments with adjusted parameters if needed for confirmation <br>
+- <b> Report Findings: </b> Findings are compiled, and conclusions are provided for simulations and future improvements <br>
 
 </div>
 
@@ -104,15 +104,15 @@ The OptiTrack motion capture system will provide for improved tracking. By lever
 
 <div style="text-align: justify;">
 
-The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation comparision and custom ROS2 nodes for real-time interaction. The behavior of the robot will be influenced through:
+The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation comparision and custom ROS2 nodes for real-time interaction. The behavior of the robot will be influenced through:<br>
 <b> 1. </b> Vision-based Perception: OptiTrack motion capture data will be fused to provide high-accuracy object localization.<br> 
 <b> 2. </b> Adaptive Motion Planning: ROS2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.<br>
 
 ### Interfaces for Interaction, Visualization, and Data Storage
 To facilitate monitoring and user interaction, the following interfaces will be developed: <br><br>
-<b> 1. </b> *Simulation:* Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution. <br>  
-<b> 2. </b> *Web-Based Dashboard:* A user-friendly interface displaying object tracking data, and force gauge readings.  <br>
-<b> 3. </b> *Data Logging System:* All relevant data (object positions, timestamps, drop locations, and trajectory corrections) will be stored in a ROS 2-based database for post-experiment analysis. <br>
+<b> 1.  Simulation: </b> Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution. <br>  
+<b> 2. Web-Based Dashboard: </b> A user-friendly interface displaying object tracking data, and force gauge readings.  <br>
+<b> 3. Data Logging System: </b> All relevant data (object positions, timestamps, drop locations, and trajectory corrections) will be stored in a ROS 2-based database for post-experiment analysis. <br>
 
 </div>
 
