@@ -68,69 +68,12 @@ Data is converted into consistent SI units and normalized (if necessary) based o
 
 Below is an graph of the communications of nodes in ROS2
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>ROS2 Drop Test rqt_graph</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      background: #f7f9fc;
-      padding: 40px;
-    }
-    .node {
-      padding: 10px 15px;
-      background-color: #d0e8ff;
-      border-radius: 10px;
-      border: 1px solid #89b4e0;
-      display: inline-block;
-      position: absolute;
-      text-align: center;
-      box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
-    }
-    .topic {
-      font-size: 12px;
-      color: #555;
-      margin-top: 4px;
-    }
-    svg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
-  </style>
-</head>
-<body>
-
-<div id="graph">
-  <div class="node" id="optitrack" style="left: 50px; top: 50px;">
-    /optitrack_node
-    <div class="topic">/ankle/pose</div>
-  </div>
-
-  <div class="node" id="filter" style="left: 300px; top: 50px;">
-    /filter_node
-    <div class="topic">/ankle/pose_filtered</div>
-    <div class="topic">/ankle/velocity</div>
-    <div class="topic">/ankle/acceleration</div>
-  </div>
-</div>
-
-<svg width="100%" height="200">
-  <!-- Arrows between nodes -->
-  <defs>
-    <marker id="arrow" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#555"/>
-    </marker>
-  </defs>
-
-  <line x1="160" y1="75" x2="300" y2="75" stroke="#555" stroke-width="2" marker-end="url(#arrow)"/>
-</svg>
-
-</body>
-</html>
+graph LR
+  OPTI[/optitrack_node/] --> POSE[/ankle/pose/]
+  POSE --> FILTER[/filter_node/]
+  FILTER --> POSEF[/ankle/pose_filtered/]
+  FILTER --> VEL[/ankle/velocity/]
+  FILTER --> ACC[/ankle/acceleration/]
 
 <!-- Needs an image of rqt_graph -->
 
