@@ -143,7 +143,7 @@ graph TD
 <br>
 
 <div align="center">
-  <img src="fgGUI.jpg" alt="Force Gauge GUI"><br>
+  <img src="docs/fgGUI.jpg" alt="Force Gauge GUI"><br>
   <b>Figure 5:</b> GUI of the force gauge setup
 </div>
 
