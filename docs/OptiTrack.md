@@ -68,14 +68,14 @@ Data is converted into consistent SI units and normalized (if necessary) based o
 
 Below is an graph of the communications of nodes in ROS2
 
-''' mermaid
+``` mermaid
 graph LR
   OPTI[/optitrack_node/] --> POSE[/ankle/pose/]
   POSE --> FILTER[/filter_node/]
   FILTER --> POSEF[/ankle/pose_filtered/]
   FILTER --> VEL[/ankle/velocity/]
   FILTER --> ACC[/ankle/acceleration/]
-'''
+```
 <!-- Needs an image of rqt_graph -->
 
 ## Experimentation
