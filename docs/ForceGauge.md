@@ -17,15 +17,28 @@
 <br>
 
 <head>
+  <meta charset="UTF-8">
+  <title>Centered Mermaid Flowchart</title>
   <script type="module">
     import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
     mermaid.initialize({ startOnLoad: true });
   </script>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+    .mermaid {
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
 
 <div class="mermaid">
-<div align="center">
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
     B --> C[ROS2-Based Software Configuration]
@@ -36,12 +49,8 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings - find stiffness]
 </div>
-</div>
-</body>
 
-<div align="center">
-  <b>Figure 1:</b> Process flow chart for the experiment.
-</div>
+</body>
 
 <br>
 
