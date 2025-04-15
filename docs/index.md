@@ -4,7 +4,6 @@ Title: <div align="center">Overview</div>
 <div align="center">
 <h1>RAS598-Team04</h1>
 <p>Tracking position and force using OptiTrack and a force gauge.</p>
-<img src="https://img.shields.io/github/commit-activity/m/<username>/<repo>?label=commits%2Fmonth">
 <h3>Updated 04/14/2025</h3>
 </div>
 

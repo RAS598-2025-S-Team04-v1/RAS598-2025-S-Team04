@@ -76,7 +76,7 @@ graph TD
 </div>
 
 <div align="center">
-  <img src="force_setup.jpg" alt="Force Gauge Setup"><br>
+  <img src="force_setup_wUR5.jpg" alt="Force Gauge Setup"><br>
   <b>Figure 3:</b> A variation of the setup for calculating. The displacements is reached with a UR5 with an attached gripper, which eliminates human error .
 </div>
 
