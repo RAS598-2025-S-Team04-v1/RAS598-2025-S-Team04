@@ -11,6 +11,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/OptiTrack/</loc>
+         <lastmod>2025-04-15</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://ras598-2025-s-team04-v1.github.io/RAS598-2025-S-Team04/static/node_modules/mathjax/</loc>
          <lastmod>2025-04-15</lastmod>
          <changefreq>daily</changefreq>
