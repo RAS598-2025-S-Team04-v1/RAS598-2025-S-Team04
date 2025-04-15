@@ -41,9 +41,13 @@ The objective of this experiment is to validate the stiffness and porjectile of 
 
 ## C. Research Question
 
+<p align="center">
+  <b>"How do we get simulation parameters to measure the stiffness and projectile of an ankle design for stability in a quadruped?"</b>
+</p>
+
 <div align="center">
 
-***"How do we get simulation parameters to measure the stiffness and projectile of an ankle design for stability in a quadruped?"***  
+  
 
 </div>
 
@@ -113,13 +117,10 @@ Since we heavily require camera sensing and sensor fusion, we would be needing k
 3. *Computer with GPU Support* – High-performance system for ROS2 and computer vision  
 4. *Network Infrastructure* – Ethernet and/or Wi-Fi for seamless communication  
 5. *Test Object* - Quadruped Robot or a prototype  
+<p align="center">
+  <img src="DemoSetup.jpg" width="500"/>
+</p>
 
-<div align="center">
-
->![](DemoSetup.jpg)  
->**Figure 2:** Demonstration Setup
-
-</div>
 
 ### Changes in environmental conditions:
 
@@ -138,8 +139,9 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 ### Timeline
 
 <p align="center">
-  <img src="Schedule.png" width="300"/>
+  <img src="your-image.jpg" width="300"/>
 </p>
+
 
 
 ## Update #1 - 04/13/2025
