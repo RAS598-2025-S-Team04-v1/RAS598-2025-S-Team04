@@ -75,6 +75,11 @@ graph TD
   <b>Figure 2:</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
 </div>
 
+<div align="center">
+  <img src="force_setup.jpg" alt="Force Gauge Setup"><br>
+  <b>Figure 3:</b> A variation of the setup for calculating. The displacements is reached with a UR5 with an attached gripper, which eliminates human error .
+</div>
+
 <br>
 
 <h2>Hardware Configuration</h2>
@@ -86,7 +91,7 @@ graph TD
 
   The hardware involved are:<br>
   - <b>Force Gauge:</b> For this experiment, a high-precision digital force gauge is used, a <a href="https://mark-10.com/products/force-gauges/series-4/">Mark-10 M4-10 force gauge</a>.<br>
-  - <b>Displacement Measurement:</b> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. <br>
+  - <b>Displacement Measurement:</b> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points.We also used UR5 which provides us help in studying the effect of displacement and velocity on the stiffness of the ankle attachment. <br>
   - <b>Mounting Fixture:</b> A custom test rig is built to hold the ankle in position which will isolate the axis along which the stiffness is being tested. It allows for controlled compression of the ankle ensuring consistent boundary conditions during each test. <br>
   - <b>Data Acquisition:</b> Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.
 </div>
@@ -122,6 +127,11 @@ graph TD
   3. Upon pressing the button, the GUI will automatically create a <b>csv</b> and <b>ros2bag</b> file, useful for post-processing.
 </div>
 
+<div align="center">
+  <img src="rosgraph.png" alt="Force Gauge GUI"><br>
+  <b>Figure 4:</b> GUI of the force gauge setup
+</div>
+
 <br>
 
 <h2>Experimentation</h2>
@@ -134,16 +144,26 @@ graph TD
 
 <div align="center">
   <img src="fgGUI.png" alt="Force Gauge GUI"><br>
-  <b>Figure 3:</b> GUI of the force gauge setup
+  <b>Figure 5:</b> GUI of the force gauge setup
 </div>
 
 <br>
 
 <div align="center">
   <iframe width="560" height="315"
-          src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+          src="https://youtube.com/shorts/WxmLll2VZsE?feature=share"
           frameborder="0"
           allowfullscreen></iframe>
+  <b>Figure 5:</b> Video of experimentation using hand for studying on the stiffness characteristics.
 </div>
 
+<br>
+
+<div align="center">
+  <iframe width="560" height="315"
+          src="https://youtu.be/wU4Gq8Kg_fg"
+          frameborder="0"
+          allowfullscreen></iframe>
+  <b>Figure 5:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
+</div>
 </body>
