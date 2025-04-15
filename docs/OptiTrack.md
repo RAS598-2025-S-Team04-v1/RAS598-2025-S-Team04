@@ -1,14 +1,24 @@
 ---
-Title: <div align="center">Overview</div>
+Title: <div align="center">OptiTrack</div>
 ---
 
-# OptiTrack for documenting Positioning and Trajectory
+<div align="center">
+  <h1>OptiTrack for documenting Positioning and Trajectory</h1>
+  <h3>Updated 04/14/2025</h3>
+</div>
 
 ## About
-    
-The stability of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using an Motion Capture setup. This setup is designed to find out the trajectory and stability of our designed ankle design using OptiTrack. 
 
-``` mermaid
+<div style="text-align: justify;">
+The stability of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a Motion Capture setup. This setup is designed to find out the trajectory and stability of our designed ankle design using OptiTrack.
+</div>
+
+<br>
+
+## Flowchart
+
+<div align="center">
+<div class="mermaid">
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
     B --> C[ROS2-Based Software Configuration]
@@ -18,79 +28,108 @@ graph TD
     F --> G{Iterate?}
     G -->|Yes| D
     G -->|No| H[Report Findings-find trajectory]
-```
->**Figure 1:** Process flow chart for the experiment.
+</div>
+</div>
 
-### Force Gauge setup
-- *Project Setup:* The setup contains an object which, for this project, an prototype of a ankle + leg of a quadruped similar to a pogostick model, with reflective markers to facilitate the OptiTrack in capturing the data. 
-- *Define Experiment Parameters:* The parameters involve setting up the placement of the reflective sensors, and defining the ground frame and the rigid body in the MOTIVE GUI . 
-- *ROS-Based Software Configuration:* The Optitrack sends it data to a particular software named MOTIVE which can be accesed to the Virtual Machine via ethernet. ROS2 will be used to       access the data of the force readings are published and subscribed via ROS2 software to visualize the data. A GUI can also constructed using PyQT5 which will: 
-  - 1. Visualize the Data (Serially show the cartesian coordinates and the quaternions with time stamp).
-    2. Contain a button to start and stop recording.
-    3. A recording system to save the data into a _bagfile_ or a _csv_ file.
-4. *Conduct Experiment:* The prototype is physically dropped, with the trajectories being tracked by motion capture of OptiTrack.
-5. *Data Collection:* Sensor data are collected, in this case Coordinates and Quaternions.
-6. *Analysis:* Data are visualized via GUI using PyQT.
-7. *Iterate (if necessary):* Conduct experiments with adjusted parameters if needed for confirmation.
-8. *Report Findings:* Findings are compiled, and conclusions are provided for simulations and future improvements.
+<br>
 
->![](force_setup.jpg)
->**Figure 2:** Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
+## OptiTrack Setup
+
+<div style="text-align: justify;">
+- <b>Project Setup:</b> The setup contains an object which, for this project, is a prototype of an ankle + leg of a quadruped similar to a pogostick model, with reflective markers to facilitate OptiTrack in capturing the data. <br><br>
+- <b>Define Experiment Parameters:</b> The parameters involve setting up the placement of the reflective sensors, and defining the ground frame and the rigid body in the MOTIVE GUI. <br><br>
+- <b>ROS-Based Software Configuration:</b> The OptiTrack sends its data to a software named MOTIVE which can be accessed on the Virtual Machine via Ethernet. ROS2 is used to access and visualize the data. A GUI can also be constructed using PyQT5 which will:<br>
+  1. Visualize the Data (serially showing the Cartesian coordinates and quaternions with timestamps).<br>
+  2. Contain a button to start and stop recording.<br>
+  3. A recording system to save the data into a <b>bagfile</b> or a <b>csv</b> file.<br><br>
+- <b>Conduct Experiment:</b> The prototype is physically dropped, and trajectories are tracked by the motion capture system. <br><br>
+- <b>Data Collection:</b> Sensor data are collected, in this case, coordinates and quaternions. <br><br>
+- <b>Analysis:</b> Data are visualized via GUI using PyQT. <br><br>
+- <b>Iterate (if necessary):</b> Conduct experiments with adjusted parameters if needed for confirmation. <br><br>
+- <b>Report Findings:</b> Findings are compiled, and conclusions are provided for simulations and future improvements.
+</div>
+
+<br>
+
+<p align="center">
+  <img src="force_setup.jpg" alt="OptiTrack Setup" width="500"><br>
+  <b>Figure 2:</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
+</p>
+
+<br>
 
 ## Hardware Configuration
-    
-The specimen or test object is physically dropped at a fixed height and angle and the reflective markers on the specimen meaure how the specimen moves in the controlled space and its contact with the ground. This will help study on the stability of the ankle attachment. 
-The hardware involved are:
-- **Optitrack:** For this experiment, reflective IR markers are used and a specialized IR camera setup, OptiTrack, to accurately find track the markers.  
-- **Mounting Fixture:** The specimen is held by hand and is physically free-falled on the ground . 
-- **Data Acquisition:** The data is acquired from the MOTIVE software and is sent to the user machine via the ethernet.
 
-## Data Conditioning and Analysis:
+<div style="text-align: justify;">
+The specimen or test object is physically dropped at a fixed height and angle, and the reflective markers on the specimen measure its movement in the controlled space and its contact with the ground. This helps study the stability of the ankle attachment. <br><br>
+<b>Hardware involved:</b><br>
+- <b>OptiTrack:</b> Reflective IR markers and a specialized IR camera setup to accurately track the markers.<br>
+- <b>Mounting Fixture:</b> The specimen is held by hand and is free-fallen onto the ground.<br>
+- <b>Data Acquisition:</b> Data is acquired from the MOTIVE software and transmitted via Ethernet.
+</div>
 
-- **Conditioning:** Rigid body is configured in Motive, with appropriate marker layout and labeling to ensure robust tracking even under rapid motion. Data is streamed into ROS2 via a dedicated bridge.
-- **Filtering:** A Savitzky-Golay filter or low-pass Butterworth filter can be applied to the position data to smooth out high-frequency noise. Numerical differentiation (post-filtering) is used to compute velocity and acceleration. Filtering can be done in a dedicated ROS2 node, ensuring real-time processing and low-latency feedback for triggering or control events.
-- **Repeatability Check:** Multiple trials are conducted under identical conditions to assess repeatability.
-- **Units and Normalization:**
-Data is converted into consistent SI units and normalized (if necessary) based on geometry or mass to enable direct comparison with simulation models.
+<br>
+
+## Data Conditioning and Analysis
+
+<div style="text-align: justify;">
+- <b>Conditioning:</b> A rigid body is configured in MOTIVE with appropriate marker layout and labeling to ensure robust tracking even during rapid motion. Data is streamed into ROS2 via a dedicated bridge.<br><br>
+- <b>Filtering:</b> A Savitzky-Golay or low-pass Butterworth filter can be applied to the position data to smooth high-frequency noise. Numerical differentiation is used for computing velocity and acceleration in a dedicated ROS2 node.<br><br>
+- <b>Repeatability Check:</b> Multiple trials are conducted under identical conditions to assess repeatability.<br><br>
+- <b>Units and Normalization:</b> Data is converted into consistent SI units and normalized (if necessary) for direct comparison with simulation models.
+</div>
+
+<br>
 
 ## Software Configuration
 
-### Optitrack Node:
-- A dedicated bridge node is used to stream 6-DOF pose data from MOTIVE into ROS2
-- This node is a publisher, giving data for each rigid body setup. It publishes a topic: /ankle/pose.
-- The rigid body configurations are stored in a yaml file passed as a ROS2 parameter
+### OptiTrack Node
 
-### Filtering Node:
-- Applies real time filtering to remove measurement noise.
-- Suitable filters include Butterworth or Savitzky-Golay filter to smooth position signal.
-- New topics after filter - /ankle/pose_filtered
-- Velocity and accelerationa can be computed via numerical differentiation after filtering.
+<div style="text-align: justify;">
+- A dedicated bridge node is used to stream 6-DOF pose data from MOTIVE into ROS2.<br>
+- It publishes a topic: <b>/ankle/pose</b>.<br>
+- Rigid body configurations are provided via a YAML parameter file.
+</div>
 
-Below is an graph of the communications of nodes in ROS2
+<br>
 
-``` mermaid
+### Filtering Node
+
+<div style="text-align: justify;">
+- Applies real-time filtering to remove measurement noise.<br>
+- Suitable filters include Butterworth or Savitzky-Golay to smooth the position signal.<br>
+- Outputs include:<br>
+  - <b>/ankle/pose_filtered</b><br>
+  - <b>/ankle/velocity</b><br>
+  - <b>/ankle/acceleration</b>
+</div>
+
+<br>
+
+## Node Communication
+
+<div align="center">
+<div class="mermaid">
 graph LR
   OPTI[/optitrack_node/] --> POSE[/ankle/pose/]
   POSE --> FILTER[/filter_node/]
   FILTER --> POSEF[/ankle/pose_filtered/]
   FILTER --> VEL[/ankle/velocity/]
   FILTER --> ACC[/ankle/acceleration/]
-```
-<!-- Needs an image of rqt_graph -->
+</div>
+</div>
+
+<br>
 
 ## Experimentation
-As per current progress, we calibrated the OptiTrack to our controlled environment. The below shows video of our team working at IDEALab and calibrating and obtaining pose data via python on Windows. Future works will involve implementing on ROS2 and filters to smoothen out data.
 
+<div style="text-align: justify;">
+OptiTrack was calibrated for our controlled environment. The video below shows our team working at IDEALab to calibrate and obtain pose data via Python on Windows. Future work involves implementing ROS2 filters to smooth the data in real time.
+</div>
 
+<br>
 
-
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-frameborder="0" allowfullscreen></iframe>
-
-
-
-<iframe width="560" height="315" 
-src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-frameborder="0" allowfullscreen></iframe>
-
+<div align="center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe><br><br>
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+</div>
