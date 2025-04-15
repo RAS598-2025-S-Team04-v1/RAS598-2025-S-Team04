@@ -7,30 +7,6 @@ Title: <div align="center">OptiTrack</div>
   <h3>Updated 04/14/2025</h3>
 </div>
 
-## About
-
-<div style="text-align: justify;">
-The stability of the ankle in the pogo stick-type model is characterized through a separate controlled experiment using a Motion Capture setup. This setup is designed to find out the trajectory and stability of our designed ankle design using OptiTrack.
-</div>
-
-<br>
-
-## Flowchart
-
-<div align="center">
-<div class="mermaid">
-graph TD
-    A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS2-Based Software Configuration]
-    C --> D[Conduct Experiment]
-    D --> E[Data Collection]
-    E --> F[Analysis]
-    F --> G{Iterate?}
-    G -->|Yes| D
-    G -->|No| H[Report Findings-find trajectory]
-</div>
-</div>
-
 <br>
 
 ## OptiTrack Setup
@@ -53,7 +29,7 @@ graph TD
 
 <p align="center">
   <img src="force_setup.jpg" alt="OptiTrack Setup" width="500"><br>
-  <b>Figure 2:</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
+  <b>Figure :</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
 </p>
 
 <br>
@@ -62,9 +38,9 @@ graph TD
 
 <div style="text-align: justify;">
 The specimen or test object is physically dropped at a fixed height and angle, and the reflective markers on the specimen measure its movement in the controlled space and its contact with the ground. This helps study the stability of the ankle attachment. <br><br>
-<b>Hardware involved:</b><br>
+<b>Hardware involved:</b><br><br>
 - <b>OptiTrack:</b> Reflective IR markers and a specialized IR camera setup to accurately track the markers.<br>
-- <b>Mounting Fixture:</b> The specimen is held by hand and is free-fallen onto the ground.<br>
+- <b>Mounting Fixture:</b> The specimen is held by hand and is free-fallen onto the ground.<br><br>
 - <b>Data Acquisition:</b> Data is acquired from the MOTIVE software and transmitted via Ethernet.
 </div>
 
