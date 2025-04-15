@@ -109,7 +109,7 @@ The sensor data will be obtained using ROS2, leveraging MuJoCo for simulation co
 <b> 2. </b> Adaptive Motion Planning: ROS2 will handle trajectory updates dynamically, allowing the robot to adjust its movements based on real-time feedback.<br>
 
 ### Interfaces for Interaction, Visualization, and Data Storage
-To facilitate monitoring and user interaction, the following interfaces will be developed:
+To facilitate monitoring and user interaction, the following interfaces will be developed: <br><br>
 <b> 1. </b> *Simulation:* Used for real-time visualization of the robot’s workspace under control environment, including object positions, planned trajectories, and motion execution. <br>  
 <b> 2. </b> *Web-Based Dashboard:* A user-friendly interface displaying object tracking data, and force gauge readings.  <br>
 <b> 3. </b> *Data Logging System:* All relevant data (object positions, timestamps, drop locations, and trajectory corrections) will be stored in a ROS 2-based database for post-experiment analysis. <br>
@@ -140,11 +140,11 @@ Since we heavily require camera sensing and sensor fusion, we would be needing k
 
 <div style="text-align: justify;">
 
-1. *OptiTrack Motion Capture System* – Infrared cameras for real-time tracking <br>
-2. *Force Gauge* - For studying stiffness  <br>
-3. *Computer with GPU Support* – High-performance system for ROS2 and computer vision <br>
-4. *Network Infrastructure* – Ethernet and/or Wi-Fi for seamless communication <br>
-5. *Test Object* - Quadruped Robot or a prototype <br>
+1. <b> OptiTrack Motion Capture System – </b> Infrared cameras for real-time tracking <br>
+2. <b> Force Gauge - </b> For studying stiffness  <br>
+3. <b> Computer with GPU Support – </b> High-performance system for ROS2 and computer vision <br>
+4. <b> Network Infrastructure – </b> Ethernet and/or Wi-Fi for seamless communication <br>
+5. <b> Test Object - </b> Quadruped Robot or a prototype <br>
 
 </div>
 
@@ -156,8 +156,8 @@ Since we heavily require camera sensing and sensor fusion, we would be needing k
 
 <div style="text-align: justify;">
 
-1. To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and force gauge for precise local object tracking, ensuring robust localization and more research data. <br>  
-2. In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.<br>
+<b> 1. </b> To handle variability in the environment, the robot will leverage sensor fusion by combining OptiTrack motion capture for global positioning and force gauge for precise local object tracking, ensuring robust localization and more research data. <br>  
+<b> 2. </b> In case of misalignment, the system will implement error recovery strategies, such as reattempting detection and adjusting the pick position. Additionally, ROS 2-based dynamic reconfiguration will allow real-time parameter tuning and trajectory modifications, supported by a web-based interface for manual overrides. This integrated approach ensures the system remains resilient and adaptable in dynamic environments, maintaining precise and reliable object manipulation.<br>
 
 </div>
 
