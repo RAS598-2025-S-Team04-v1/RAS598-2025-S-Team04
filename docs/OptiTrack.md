@@ -15,23 +15,6 @@ The stability of the ankle in the pogo stick-type model is characterized through
 
 <br>
 
-## Flowchart
-
-<div align="center">
-<div class="mermaid">
-graph TD
-    A[Project Setup] --> B[Define Experiment Parameters]
-    B --> C[ROS2-Based Software Configuration]
-    C --> D[Conduct Experiment]
-    D --> E[Data Collection]
-    E --> F[Analysis]
-    F --> G{Iterate?}
-    G -->|Yes| D
-    G -->|No| H[Report Findings-find trajectory]
-</div>
-</div>
-
-<br>
 
 ## OptiTrack Setup
 
@@ -107,17 +90,32 @@ The specimen or test object is physically dropped at a fixed height and angle, a
 <br>
 
 ## Node Communication
-
-<div align="center">
-<div class="mermaid">
+<head>
+  <meta charset="UTF-8">
+  <title>Mermaid Flowchart Example</title>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+  <style>
+    /* Optional: center the flowchart container */
+    .chart-container {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="chart-container">
+    <div class="mermaid">
 graph LR
   OPTI[/optitrack_node/] --> POSE[/ankle/pose/]
   POSE --> FILTER[/filter_node/]
   FILTER --> POSEF[/ankle/pose_filtered/]
   FILTER --> VEL[/ankle/velocity/]
   FILTER --> ACC[/ankle/acceleration/]
-</div>
-</div>
+    </div>
+  </div>
+</body>
 
 <br>
 
