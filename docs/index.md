@@ -1,12 +1,12 @@
 ---
 Title: <div align="center">Overview</div>
 ---
-
 <div align="center">
-  <h1>Experimental Test Drop Setup Using OptiTrack and Force Gauge</h1>
-  <h3>Updated 04/14/2025</h3>
+<h1>RAS598-Team04</h1>
+<p>Tracking position and force using OptiTrack and a force gauge.</p>
+<img src="https://img.shields.io/github/commit-activity/m/<username>/<repo>?label=commits%2Fmonth">
+<h3>Updated 04/14/2025</h3>
 </div>
-
 
 ## A. About  
 <div align="center">  
@@ -179,8 +179,10 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 
 <p align="center">
   <img src="new_timeline.jpg" width="300"/><br>
-  <b>Figure 1:</b> Timeline of our experimenting. (recently updated)
+  <b>Figure :</b> Timeline of our experimenting. (recently updated)
 </p>
+
+<br>
 
 ## Update #1 - 04/13/2025
 
@@ -192,7 +194,7 @@ Previously, we were of the idea of using a UR5 to test the repeatability and dro
 
 <p align="center">
   <img src="prev_timeline.jpg" width="300"/><br>
-  <b>Figure 1:</b> Previous timeline that we were following.
+  <b>Figure :</b> Previous timeline that we were following.
 </p>
 
 </div>

@@ -169,3 +169,10 @@ graph TD
   <b>Video 2:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
 </div>
 </body>
+
+<br>
+<div style="text-align: justify;">
+  <h2> Future plans </h2>
+  We will be adding an OptiTrack to validate our displacement readings, attaching it to the IR markers, along with the UR5. We will also be adding those to the ROS2 interface and add filtering nodes as well.
+</div>
+
