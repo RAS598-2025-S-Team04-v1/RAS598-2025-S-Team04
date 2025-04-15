@@ -1,9 +1,3 @@
-<head>
-  <meta charset="UTF-8">
-  <title>Force Gauge</title>
-</head>
-<body>
-
 <h1>Stiffness Measurement via Force Gauge and ROS2</h1>
 
 <h2>About</h2>
@@ -14,27 +8,16 @@
 
 <br>
 
-<head>
-  <meta charset="UTF-8">
-  <title>Centered Mermaid Flowchart</title>
-  <script type="module">
-    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-    mermaid.initialize({ startOnLoad: true });
-  </script>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      margin: 0;
-    }
-    .mermaid {
-      text-align: center;
-    }
-  </style>
-</head>
-<body>
+<!-- Mermaid setup -->
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+<style>
+  .mermaid {
+    text-align: center;
+  }
+</style>
 
 <div class="mermaid">
 graph TD
@@ -47,8 +30,6 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings - find stiffness]
 </div>
-
-</body>
 
 <br>
 
@@ -76,8 +57,8 @@ graph TD
 </div>
 
 <div align="center">
-  <img src="force_setup_wUR5.jpg" alt="Force Gauge Setup"><br>
-  <b>Figure 3:</b> A variation of the setup for calculating. The displacements is reached with a UR5 with an attached gripper, which eliminates human error .
+  <img src="force_setup_wUR5.jpg" alt="Force Gauge Setup with UR5"><br>
+  <b>Figure 3:</b> A variation of the setup for calculating. The displacements are reached with a UR5 with an attached gripper, which eliminates human error.
 </div>
 
 <br>
@@ -86,12 +67,10 @@ graph TD
 
 <div style="text-align: justify;">
   The specimen or test object is fixated on the ground via supports and screws and via strings, the specimen is attached to the hook attachment of a Force Gauge which is placed horizontally and tensile forces are added onto the ankle component to get the reading. <br><br>
-
   The Force Gauge will pass through a few marked displacement points and the force readings are plotted to find a best fit. <br><br>
-
   The hardware involved are:<br>
   - <b>Force Gauge:</b> For this experiment, a high-precision digital force gauge is used, a <a href="https://mark-10.com/products/force-gauges/series-4/">Mark-10 M4-10 force gauge</a>.<br>
-  - <b>Displacement Measurement:</b> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points.We also used UR5 which provides us help in studying the effect of displacement and velocity on the stiffness of the ankle attachment. <br>
+  - <b>Displacement Measurement:</b> Displacement are marked via a ruler and the force gauge is physically pulled to the displacement points. We also used UR5 which provides us help in studying the effect of displacement and velocity on the stiffness of the ankle attachment. <br>
   - <b>Mounting Fixture:</b> A custom test rig is built to hold the ankle in position which will isolate the axis along which the stiffness is being tested. It allows for controlled compression of the ankle ensuring consistent boundary conditions during each test. <br>
   - <b>Data Acquisition:</b> Force reading is continuously logged from the gauge via serial interface or USB using a custom ROS2 node.
 </div>
@@ -113,14 +92,12 @@ graph TD
 
 <div style="text-align: justify;">
   The force gauge is connected to the system via serial communicator (USB provided by the manufacturer). <br><br>
-
   The goal of using ROS2 is to serve three purposes:<br>
   - To visualize graphically the force readings.<br>
   - Create a GUI and show the data, have a button to start and stop recording.<br>
   - Upon pressing the button, the GUI will automatically create a <b>csv</b> and <b>ros2bag</b> file, useful for post-processing. <br><br>
-
   Using ROS2 we created a publisher and subscriber nodes.<br>
-  - The <b>publisher node</b> will access the data from the serial communicator and publish a topic <b>'\force_reading'</b> which continuously updates the force reading from the force gauge.<br>
+  - The <b>publisher node</b> will access the data from the serial communicator and publish a topic <b>'\\force_reading'</b> which continuously updates the force reading from the force gauge.<br>
   - The <b>subscriber node</b> subscribes the topic and performs the following:<br>
   1. Visualizes graphically the force readings.<br>
   2. Create a GUI and show the data, have a button to start and stop recording.<br>
@@ -128,7 +105,7 @@ graph TD
 </div>
 
 <div align="center">
-  <img src="docs/rosgraph.jpg" alt="Force Gauge GUI"><br>
+  <img src="./docs/rosgraph.jpg" alt="ROS Graph"><br>
   <b>Figure 4:</b> GUI of the force gauge setup
 </div>
 
@@ -153,9 +130,8 @@ graph TD
   <iframe width="560" height="315"
           src="https://youtube.com/shorts/WxmLll2VZsE?feature=share"
           frameborder="0"
-          allowfullscreen></iframe>
-  <br>
-  <b>Video 2:</b> Video of experimentation using hand for studying on the stiffness characteristics.
+          allowfullscreen></iframe><br>
+  <b>Video 1:</b> Video of experimentation using hand for studying on the stiffness characteristics.
 </div>
 
 <br>
@@ -164,15 +140,14 @@ graph TD
   <iframe width="560" height="315"
           src="https://youtu.be/wU4Gq8Kg_fg"
           frameborder="0"
-          allowfullscreen></iframe>
-  <br>
+          allowfullscreen></iframe><br>
   <b>Video 2:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
 </div>
-</body>
 
 <br>
-<div style="text-align: justify;">
-  <h2> Future plans </h2>
-  We will be adding an OptiTrack to validate our displacement readings, attaching it to the IR markers, along with the UR5. We will also be adding those to the ROS2 interface and add filtering nodes as well.
-</div>
 
+<h2>Future Plans</h2>
+
+<div style="text-align: justify;">
+We will be adding an OptiTrack to validate our displacement readings, attaching it to the IR markers, along with the UR5. We will also be adding those to the ROS2 interface and add filtering nodes as well.
+</div>
