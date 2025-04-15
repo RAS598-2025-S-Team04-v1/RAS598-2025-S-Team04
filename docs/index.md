@@ -148,10 +148,6 @@ Since we heavily require camera sensing and sensor fusion, we would be needing k
 
 </div>
 
-<p align="center">
-  <img src="DemoSetup.jpg" width="500"/>
-</p>
-
 ### Changes in environmental conditions:
 
 <div style="text-align: justify;">
@@ -180,8 +176,10 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 
 ### Timeline
 
+
 <p align="center">
-  <img src="your-image.jpg" width="300"/>
+  <img src="new_timeline.jpg" width="300"/>
+  <b>Figure 1:</b> Timeline of our experimenting. (recently updated)
 </p>
 
 ## Update #1 - 04/13/2025
@@ -191,5 +189,10 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 <div style="text-align: justify;">
 
 Previously, we were of the idea of using a UR5 to test the repeatability and drop test our quadruped with an added ankle attachment for stability. But considering timeline and limitation constraints, we changed our goal statement to analyzing the position, orientation(drop trajectory) via OptiTrack and stiffness via force gauge. We will be physically dropping testing a part of the quadruped (the ankle attachment) for the study. Sensor data which is filtered will be further analyzed and added as a simulation parameter for a MujoCo simulation adding on to research done by Prof. Aukes.
+
+<p align="center">
+  <img src="prev_timeline.jpg" width="300"/>
+  <b>Figure 1:</b> Previous timeline that we were following.
+</p>
 
 </div>

@@ -154,7 +154,8 @@ graph TD
           src="https://youtube.com/shorts/WxmLll2VZsE?feature=share"
           frameborder="0"
           allowfullscreen></iframe>
-  <b>Figure 5:</b> Video of experimentation using hand for studying on the stiffness characteristics.
+  <br>
+  <b>Video 2:</b> Video of experimentation using hand for studying on the stiffness characteristics.
 </div>
 
 <br>
@@ -164,6 +165,7 @@ graph TD
           src="https://youtu.be/wU4Gq8Kg_fg"
           frameborder="0"
           allowfullscreen></iframe>
-  <b>Figure 5:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
+  <br>
+  <b>Video 2:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
 </div>
 </body>
