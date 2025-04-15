@@ -390,9 +390,24 @@
 
 <br>
 
-<!-- Mermaid flowchart -->
-<pre>
-<code class="language-mermaid">
+<head>
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true });
+  </script>
+ <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }
+    .gscrollbar-fixer { padding-right: 15px; }
+    .gdesc-inner { font-size: 0.75rem; }
+    body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color);}
+    body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color);}
+    body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color);}</style> <script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body>
+
+<div class="mermaid">
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
     B --> C[ROS2-Based Software Configuration]
@@ -401,9 +416,12 @@ graph TD
     E --> F[Analysis]
     F --> G{Iterate?}
     G -->|Yes| D
-    G -->|No| H[Report Findings-find stiffness]
-</code>
-</pre>
+    G -->|No| H[Report Findings - find stiffness]
+</div>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(() => { lightbox.reload() });
+</script></body>
 
 <div align="center">
   <b>Figure 1:</b> Process flow chart for the experiment.
@@ -505,9 +523,7 @@ graph TD
           allowfullscreen></iframe>
 </div>
 
-<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(() => { lightbox.reload() });
-</script></body>
+</body>
 </html>
 
 
