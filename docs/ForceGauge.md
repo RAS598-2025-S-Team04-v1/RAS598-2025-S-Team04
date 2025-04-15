@@ -120,7 +120,7 @@ graph TD
 <br>
 
 <p align="center">
-  ![ros2](.docs/rosgraph.png)
+  ![ros2](../docs/rosgraph.png)
   <b>Figure:</b> Force Gauge
 </p>
 
