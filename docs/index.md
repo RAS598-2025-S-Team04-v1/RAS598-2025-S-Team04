@@ -179,7 +179,7 @@ We will be mentored by Dr. Daniel M. Aukes, who has expressed his interest in pr
 
 <p align="center">
   <img src="new_timeline.jpg" width="300"/><br>
-  <b>Figure 1:</b> Timeline of our experimenting. (recently updated)
+  <b>Figure :</b> Timeline of our experimenting. (recently updated)
 </p>
 
 ## Update #1 - 04/13/2025
@@ -192,7 +192,7 @@ Previously, we were of the idea of using a UR5 to test the repeatability and dro
 
 <p align="center">
   <img src="prev_timeline.jpg" width="300"/><br>
-  <b>Figure 1:</b> Previous timeline that we were following.
+  <b>Figure :</b> Previous timeline that we were following.
 </p>
 
 </div>
