@@ -25,6 +25,7 @@
 <body>
 
 <div class="mermaid">
+<div align="center">
 graph TD
     A[Project Setup] --> B[Define Experiment Parameters]
     B --> C[ROS2-Based Software Configuration]
@@ -35,7 +36,7 @@ graph TD
     G -->|Yes| D
     G -->|No| H[Report Findings - find stiffness]
 </div>
-
+</div>
 </body>
 
 <div align="center">
