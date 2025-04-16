@@ -138,7 +138,7 @@ graph TD
 
 <div align="center">
   <iframe width="560" height="315"
-          src="https://youtu.be/wU4Gq8Kg_fg"
+          src="https://www.youtube.com/embed/wU4Gq8Kg_fg"
           frameborder="0"
           allowfullscreen></iframe><br>
   <b>Video 2:</b> Video of experimentation using UR5 for studying on the stiffness characteristics.
