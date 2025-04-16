@@ -127,3 +127,20 @@ OptiTrack was calibrated for our controlled environment. The video below shows o
 
 <br>
 
+<div align="center">
+  <iframe width="560" height="315"
+          src="https://youtu.be/embed/vSl41NQOHbg"
+          frameborder="0"
+          allowfullscreen></iframe><br>
+  <b>Video 1:</b> Video of Optitrack Calibration.
+</div>
+
+<br>
+
+<div align="center">
+  <iframe width="560" height="315"
+          src="https://youtu.be/embed/JNOpxTxRALE"
+          frameborder="0"
+          allowfullscreen></iframe><br>
+  <b>Video 1:</b> Video of Optitrack Calibration.
+</div>

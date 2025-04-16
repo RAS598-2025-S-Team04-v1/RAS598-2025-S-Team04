@@ -128,7 +128,7 @@ graph TD
 
 <div align="center">
   <iframe width="560" height="315"
-          src="https://youtube.com/shorts/WxmLll2VZsE?feature=share"
+          src="https://youtube.com/shorts/embed/WxmLll2VZsE?feature=share"
           frameborder="0"
           allowfullscreen></iframe><br>
   <b>Video 1:</b> Video of experimentation using hand for studying on the stiffness characteristics.
@@ -145,10 +145,6 @@ graph TD
 </div>
 
 <br>
-
-<iframe width="560" height="315" src="https://youtu.be/wU4Gq8Kg_fg" 
-frameborder="0" allowfullscreen></iframe>
-
 
 <h2>Future Plans</h2>
 
