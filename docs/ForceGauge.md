@@ -52,10 +52,13 @@ graph TD
 <br>
 
 ![Figure 2: Setup for calculating](force_setup.jpg)
+<div align="center">
+  <b>Figure 2:</b> A setup for calculating.
+</div>
 
 
 <div align="center">
-  <img src="RAS598-2025-S-Team04\docs\force_setup.jpg" alt="Force Gauge Setup with UR5"><br>
+  <img src="force_setup.jpg" alt="Force Gauge Setup with UR5"><br>
   <b>Figure 3:</b> A variation of the setup for calculating. The displacements are reached with a UR5 with an attached gripper, which eliminates human error.
 </div>
 
