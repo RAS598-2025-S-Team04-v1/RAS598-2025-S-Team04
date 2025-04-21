@@ -103,11 +103,10 @@ graph TD
   3. Upon pressing the button, the GUI will automatically create a <b>csv</b> and <b>ros2bag</b> file, useful for post-processing.
 </div>
 
-<p align="center">
-  <img src="./docs/rosgraph.jpg" alt="ROS Graph"><br>
+![](rosgraph.jpg)
+<div align="center">
   <b>Figure 4:</b> GUI of the force gauge setup
-</p>
-
+</div>
 <br>
 
 <h2>Experimentation</h2>
