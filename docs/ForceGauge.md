@@ -51,10 +51,8 @@ graph TD
 
 <br>
 
-<div align="center">
-  <img src="force_setup.jpg" alt="Force Gauge Setup"><br>
-  <b>Figure 2:</b> Setup for calculating. The displacements will be reached via human hand, preferably via an UR5 to reduce human error.
-</div>
+![Figure 2: Setup for calculating](docs/force_setup.jpg)
+
 
 <div align="center">
   <img src="force_setup_wUR5.jpg" alt="Force Gauge Setup with UR5"><br>
