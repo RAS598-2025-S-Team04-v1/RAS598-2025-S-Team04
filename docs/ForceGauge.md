@@ -51,7 +51,7 @@ graph TD
 
 <br>
 
-![Figure 2: Setup for calculating](docs/force_setup.jpg)
+![Figure 2: Setup for calculating](force_setup.jpg)
 
 
 <div align="center">
