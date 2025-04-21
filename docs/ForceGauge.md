@@ -56,12 +56,10 @@ graph TD
   <b>Figure 2:</b> A setup for calculating.
 </div>
 
-
+![](force_gauge_wUR5.jpg)
 <div align="center">
-  <img src="./force_gauge_wUR5.jpg" width='500'/><br>
   <b>Figure 3:</b> A variation of the setup for calculating. The displacements are reached with a UR5 with an attached gripper, which eliminates human error.
 </div>
-
 <br>
 
 <h2>Hardware Configuration</h2>
