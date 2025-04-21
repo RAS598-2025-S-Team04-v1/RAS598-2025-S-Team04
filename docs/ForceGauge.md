@@ -105,7 +105,7 @@ graph TD
 
 ![](rosgraph.jpg)
 <div align="center">
-  <b>Figure 4:</b> GUI of the force gauge setup
+  <b>Figure 4:</b> Rqt_graph of the force gauge setup
 </div>
 <br>
 
@@ -117,10 +117,11 @@ graph TD
 
 <br>
 
-![ros2](../docs/rosgraph.png)
-
-**Figure:** Force Gauge
-
+![ros2](fgGUI.jpg)
+<div align="center">
+  <b>Figure 5:</b> GUI of the force gauge setup
+</div>
+<br>
 
 <br>
 
