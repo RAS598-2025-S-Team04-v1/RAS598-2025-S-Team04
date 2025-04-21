@@ -117,7 +117,7 @@ graph TD
 
 <br>
 
-![ros2](fgGUI.jpg)
+![](fgGUI.jpg)
 <div align="center">
   <b>Figure 5:</b> GUI of the force gauge setup
 </div>
