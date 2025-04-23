@@ -117,11 +117,11 @@ graph TD
 
 <br>
 
-![](fgGUI.jpg)
-<div align="center">
-  <b>Figure 5:</b> GUI of the force gauge setup
-</div>
-<br>
+<p align="center">
+  <img src="fgGUI.jpg" alt="Force Gauge GUI" style="max-width: 100%;">
+</p>
+
+<p align="center"><b>Figure 5:</b> GUI of the force gauge setup</p>
 
 <br>
 
