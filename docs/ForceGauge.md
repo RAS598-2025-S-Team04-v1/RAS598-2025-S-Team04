@@ -103,6 +103,7 @@ graph TD
   3. Upon pressing the button, the GUI will automatically create a <b>csv</b> and <b>ros2bag</b> file, useful for post-processing.
 </div>
 
+<br>
 ![](rosgraph.jpg)
 <div align="center">
   <b>Figure 4:</b> Rqt_graph of the force gauge setup
@@ -117,12 +118,10 @@ graph TD
 
 <br>
 
-<p align="center">
-  <img src="fgGUI.jpg" alt="Force Gauge GUI" style="max-width: 100%;">
-</p>
-
-<p align="center"><b>Figure 5:</b> GUI of the force gauge setup</p>
-
+![](fgGUI.jpg)
+<div align="center">
+  <b>Figure 4:</b> GUI of the force gauge setup
+</div>
 <br>
 
 <div align="center">
